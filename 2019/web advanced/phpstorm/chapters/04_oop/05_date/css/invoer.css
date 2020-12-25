@@ -1,0 +1,9 @@
+/* form */
+label {
+    display: inline-block;
+    width: 60px;
+}
+
+input {
+    width: 120px;
+}

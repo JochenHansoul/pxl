@@ -1,0 +1,17 @@
+﻿<Window x:Class="Exercise09_SodaMachine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SodaAutomate"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Name="amountGivenLabel" Content="Amount Given" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,67,0,0"/>
+        <TextBox Name="amountGivenTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="180,70,0,0"/>
+        <Label Name="itemCostLabel" Content="Item Cost" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="429,67,0,0"/>
+        <TextBox Name="itemCostTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="509,70,0,0"/>
+        <Button Name="calculateButton" Content="Calculate" Click="CalculateButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="151,144,0,0"/>
+        <Label Name="resultlabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="5.597,5.487" Margin="357,144,0,0"/>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+REM	a schema in SQL is a collection of database objects linked with a particular database username
+begin
+	for i in (select * from tabs) loop
+		execute immediate ('drop table ' || i.table_name || ' cascade constraints');
+	end loop;
+	for i in (select * from user_objects where object_type = 'SEQUENCE') loop
+		execute immediate ('drop sequence ' || i.object_name);
+	end loop;
+	for i in (select * from user_objects where object_type = 'VIEW') loop
+		execute immediate ('drop view ' || i.object_name);
+	end loop;
+end;
+/

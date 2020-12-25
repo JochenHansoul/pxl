@@ -1,0 +1,16 @@
+{
+  "require": {
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Database\\": "src/Database"
+    },
+    "files": [
+      "src/Database/DSN.php",
+      "src/Database/OPTIONS.php",
+      "src/User/USERS.php"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label for="imput_number">Geef een getal tussen 2 en 10:</label>
+    <input type="number" id="imput_number">
+    <input type="button" value="Draw Pyramid"
+           onclick="drawPyramid(parseInt(imput_number.value), 2, 10, '*', draw_pyramid)">
+    <br>
+    <output id="draw_pyramid"></output>
+</form>
+<script src="js/8-draw-pyramid.js"></script>
+</body>
+</html>

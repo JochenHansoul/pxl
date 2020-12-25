@@ -1,0 +1,17 @@
+﻿<Window x:Class="SliderOefening2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SliderOefening2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas Name="paperCanvas" Background="PeachPuff" HorizontalAlignment="Left" Height="232" VerticalAlignment="Top" Width="421" Margin="190,67,0,0"/>
+        <Slider Name="verticalSlider" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="10.579,18.633" Margin="151,67,0,0" Height="232" ValueChanged="VerticalSlider_ValueChanged" />
+        <Slider Name="horizontalSlider" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.74,2.24" Margin="190,317,0,0" Width="421" ValueChanged="HorizontalSlider_ValueChanged"/>
+        <Label Name="verticalLabel" Content=" " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,156,0,0"/>
+        <Label Name="horizontalLabel" Content=" " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="376,355,0,0"/>
+
+    </Grid>
+</Window>

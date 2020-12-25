@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>De tuin van Sam</title>
+    <link rel="stylesheet" href="css/2-contacten.css">
+</head>
+<body>
+<nav>
+    <figure>
+        <img src="assets/logo.png" height="129" width="185" alt="nav_image"/>
+    </figure>
+    <ul>
+        <li><a href="1-nieuws.html">NIEUWS</a></li>
+        <li><a href="3-producten.html">PRODUCTEN</a></li>
+        <li><a href="2-contacten.html">CONTACT</a></li>
+    </ul>
+</nav>
+<header>
+    <img src="assets/banner.jpg" height="300" width="1050" alt="header_img"/>
+    <h2 id="header_tekst">De tuin van Sam</h2>
+</header>
+<!-- contact -->
+<section>
+    <figure>
+        <img src="assets/contact.png" height="1714" width="2400" alt="contact"/>
+    </figure>
+    <h1>Contact</h1>
+    <p>Wij horen graag van onze fans. Laat van je horen</p>
+    <form id="send_email" action="mailto:sam.agten@pxl.be" method="post" enctype="text/plain">
+        <input type="text" name="naam" placeholder="Naam">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="subject" placeholder="Subject">
+        <br>
+        <label>
+            <textarea name="boodschap" placeholder="Boodschap" cols="260" rows="20"></textarea>
+        </label>
+        <br>
+        <input class="email_button" type="submit" value="Stuur boodschap">
+    </form>
+</section>
+<div class="clear"></div>
+<footer>
+    <p>Copyright PXL 2018</p>
+</footer>
+</body>
+</html>

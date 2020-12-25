@@ -1,0 +1,2 @@
+#een boek kost 24.95, de bibliotheek heeft 40% korting, het leveren van een boek kost 7.5 voor de eerste en 0.75 voor elke volgende. Hoeveel kosten 60 boeken?
+print(24.95 * 0.6 + 3 + 0.75 * 59)

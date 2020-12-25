@@ -1,0 +1,17 @@
+def is_even(getal):
+    return getal % 2 == 0
+
+
+def is_oneven(getal):
+    return not is_even(getal)
+
+
+print("Dit getal is even:")
+print(is_even(5))
+print("Dit getal is oneven:")
+print(is_oneven(45))
+
+voor floats:
+x 10
+afkappen
+mod/10

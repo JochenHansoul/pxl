@@ -1,0 +1,13 @@
+﻿<Window x:Class="Exercise11_IntToBinary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConvertIntToBinary"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="inputTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.38,4.199" Margin="266,101,0,0" TextChanged="InputTextBox_TextChanged"/>
+        <Label Name="outputLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="311,213,0,0"/>
+    </Grid>
+</Window>

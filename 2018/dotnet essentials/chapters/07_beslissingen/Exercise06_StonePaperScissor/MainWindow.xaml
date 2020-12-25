@@ -1,0 +1,18 @@
+﻿<Window x:Class="Exercise06_StonePaperScissor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SteenPapierSchaar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="stoneButton" Click="StoneButton_Click" Content="Stone" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="116,112,0,0"/>
+        <Button Name="paperPutton" Click="PaperPutton_Click" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="351,112,0,0"/>
+        <Button Name="scissorButton" Click="ScissorButton_Click" Content="Scissor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="575,112,0,0"/>
+        <Button Name="replayButton" Visibility="Hidden" Content="Replay?" Click="ReplayButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="351,304,0,0"/>
+        <Label Name="nameLabel" Content="Computer:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,192,0,0"/>
+        <Label Name="outputLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="334,192,0,0" RenderTransformOrigin="-13.73,0.727"/>
+        <Label Name="winnerLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="506,192,0,0" RenderTransformOrigin="10.089,-0.741"/>
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="Exercise18_FindString.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise18_FindString"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Name="locationLabel" Content="location" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="103,44,0,0"/>
+        <TextBox Name="locationTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="474" Margin="188,48,0,0"/>
+        <Label Name="searchLabel" Content="Search on" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="103,89,0,0"/>
+        <TextBox Name="searchTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="388" Margin="188,93,0,0"/>
+        <TextBox Name="outputTextBox" HorizontalAlignment="Left" Height="191" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="600" Margin="88,162,0,0"/>
+        <Button Name="searchButton" Click="SearchButton_Click" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Margin="608,94,0,0"/>
+    </Grid>
+</Window>

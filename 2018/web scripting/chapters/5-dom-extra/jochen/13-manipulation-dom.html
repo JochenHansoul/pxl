@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulatie</title>
+    <link rel="stylesheet" href="styles/oef13-manipulatie-dom.css">
+</head>
+<body>
+<h1>Sentence Reverser!</h1>
+<form>
+    <label for="phrase">Phrase: </label>
+    <input id="phrase" value="Javascript, DOM en CSS zijn cool!">
+    <br>
+    <label for="filter">Filter: </label>
+    <input id="filter" value="Javascript, DOM">
+    <br>
+    <input type="button" id="filer_button"
+           onclick="reverseSentence(phrase.value, filter.value, output_phrase, output_filter, 'red', 'margin_left10')"
+           value="GO!">
+    <br>
+    <output id="output_phrase"></output>
+    <br>
+    <output id="output_filter"></output>
+</form>
+<script src="js/13-manipulation-dom.js"></script>
+</body>
+</html>

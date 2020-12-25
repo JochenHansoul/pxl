@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "model\\": "src/model"
+    }
+},
+  "require": {
+    "ext-pdo": "*"
+  }
+}

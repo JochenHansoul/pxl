@@ -1,0 +1,17 @@
+﻿<Window x:Class="DominationGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DominationGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas Name="paperCanvas" MouseMove="PaperCanvas_MouseMove" MouseDown="PaperCanvas_MouseDown" Background="AliceBlue" HorizontalAlignment="Left" Height="356" VerticalAlignment="Top" Width="440" Margin="42,18,0,0"/>
+
+        <Label Name="mouseMoveLabel" Content="Coordinates" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="548,87,0,0"/>
+        <Label Name="blockLabel" Content="Block" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="548,167,0,0"/>
+        <Label Name="playerLabel" Content="Player" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="548,270,0,0"/>
+
+    </Grid>
+</Window>

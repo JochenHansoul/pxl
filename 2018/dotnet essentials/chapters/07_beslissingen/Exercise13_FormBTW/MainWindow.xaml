@@ -1,0 +1,19 @@
+﻿<Window x:Class="Exercise13_FormBTW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise13_FormBTW"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Nettoprijs:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="173,97,0,0"/>
+        <Label Content="Btw:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="173,187,0,0"/>
+        <Label Content="Totaal:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="173,237,0,0"/>
+        <TextBox Name="nettoTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="284,100,0,0"/>
+        <CheckBox Name="lowRateCheckBox" Content="Verlaagd tarief" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="284,149,0,0"/>
+        <TextBlock Name="btwTextBlock" Background="Gray" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="284,197,0,0" Width="120"/>
+        <TextBlock Name="totalTextBlock" Background="Gray" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="284,242,0,0" Width="120"/>
+        <Button Name="calculateButton" Click="CalculateButton_Click" Content="Bereken" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="329,286,0,0"/>
+    </Grid>
+</Window>

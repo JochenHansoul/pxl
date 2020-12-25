@@ -1,0 +1,17 @@
+﻿<Window x:Class="Exercise20_till_23.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise20_till_23"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Name="coursesLabel" Content="Vaknaam" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="194,93,0,0"/>
+        <TextBox Name="keyTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Margin="262,93,0,0"/>
+        <Button Name="searchButton" Click="SearchCourseButton_Click" Content="Search Dictionary" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Margin="493,157,0,0"/>
+        <Button Name="searchArrayButton" Click="SearchArrayButton_Click" Content="Search Array" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Margin="493,213,0,0"/>
+        <Button Name="listSearchButton" Click="searchListButton_Click" Content="Search list" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Margin="493,271,0,0"/>
+        <TextBox Name="resultTextBox" HorizontalAlignment="Left" Height="173" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" Margin="194,145,0,0"/>
+    </Grid>
+</Window>

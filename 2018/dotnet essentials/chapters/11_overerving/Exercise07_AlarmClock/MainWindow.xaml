@@ -1,0 +1,21 @@
+﻿<Window x:Class="Exercise07_AlarmClock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise7_AlarmClock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Name="clockTextBlock" FontSize="55" HorizontalAlignment="Left" TextWrapping="Wrap" Text="uu:mm:dd" VerticalAlignment="Top" Margin="190,114,0,0"/>
+        <TextBox Name="alarmTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="479,151,0,0"/>
+        <Button Name="alarmButton" Click="AlarmButton_Click" Content="Set alarm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="553,226,0,0"/>
+        <Button Name="resetButton" Click="ResetButton_Click" Content="ResetButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="552,277,0,0"/>
+        <GroupBox Header="Alarm type" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="420,210,0,0">
+            <Grid>
+                <RadioButton Name="beeperRadioButton" Content="Beeper" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,16,0,0"/>
+                <RadioButton Name="flickerRadioButton" Content="Flicker" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,45,0,0"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

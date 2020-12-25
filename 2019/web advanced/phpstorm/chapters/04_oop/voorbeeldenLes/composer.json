@@ -1,0 +1,8 @@
+{
+  "autoload": {
+    "psr-4": {
+      "map\\": "src/map/",
+      "drawing\\": "src/drawing/"
+    }
+  }
+}
