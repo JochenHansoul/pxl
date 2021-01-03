@@ -1,9 +1,9 @@
-package be.pxl.h8.opdrachten;
+package be.pxl.h8.opdrachten.op07_dayOfWeek;
 
 import java.time.DayOfWeek;
 import java.util.Scanner;
 
-public class Opdracht7_dayOfWeek {
+public class Opdracht {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("geef een dagnummer in");

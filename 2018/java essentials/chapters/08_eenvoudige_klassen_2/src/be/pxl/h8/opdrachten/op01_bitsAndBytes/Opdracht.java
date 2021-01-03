@@ -1,8 +1,8 @@
-package be.pxl.h8.opdrachten;
+package be.pxl.h8.opdrachten.op01_bitsAndBytes;
 
 import java.util.Scanner;
 
-public class Opdracht1 {
+public class Opdracht {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Geef een getal in");

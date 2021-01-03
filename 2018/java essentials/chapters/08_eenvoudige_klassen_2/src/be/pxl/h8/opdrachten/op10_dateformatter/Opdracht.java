@@ -1,10 +1,10 @@
-package be.pxl.h8.opdrachten;
+package be.pxl.h8.opdrachten.op10_dateformatter;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class Opdracht10_dateformatter {
+public class Opdracht {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("geef een datum in in formaat dd/mm/yyyy");

@@ -1,6 +1,6 @@
-package be.pxl.h8.opdrachten;
+package be.pxl.h8.opdrachten.op02_wrappersAndMethods;
 
-public class Opdracht2 {
+public class Opdracht {
     public static void main(String args[]) {
 
         System.out.println("min.value = " + Integer.MIN_VALUE);

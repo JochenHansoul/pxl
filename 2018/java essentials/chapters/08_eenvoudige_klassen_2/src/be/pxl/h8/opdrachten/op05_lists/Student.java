@@ -1,4 +1,4 @@
-package be.pxl.h8.opdrachten.opdracht5;
+package be.pxl.h8.opdrachten.opdr05_lists;
 
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public class Student {
     }
 
     public void drukAf() {
-        System.out.println("Student  " + naam + " heeft nummer " + nr);
+        System.out.println("Student " + naam + " heeft nummer " + nr);
     }
 
     @Override

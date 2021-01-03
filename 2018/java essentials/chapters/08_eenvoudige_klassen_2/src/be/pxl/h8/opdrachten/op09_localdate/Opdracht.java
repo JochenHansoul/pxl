@@ -1,10 +1,10 @@
-package be.pxl.h8.opdrachten;
+package be.pxl.h8.opdrachten.op09_localdate;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
-public class Opdracht9_localdate {
+public class Opdracht {
     public static void main(String[] args) {
         LocalDate geboortedatum = LocalDate.of(2000, 6, 16);
         LocalDate vandaag = LocalDate.now();

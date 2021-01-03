@@ -1,8 +1,8 @@
-package be.pxl.h8.opdrachten;
+package be.pxl.h8.opdrachten.op04_arraylist;
 
 import java.util.ArrayList;
 
-public class Opdracht4_arraylist {
+public class Opdracht {
     public static void main(String[] args) {
         // opdracht1
         ArrayList <String> test = new ArrayList<String>();

@@ -1,4 +1,4 @@
-package be.pxl.h8.opdrachten;
+package be.pxl.h8.opdrachten.op03_faculteit;
 
 import java.math.BigInteger;
 import java.util.Scanner;
