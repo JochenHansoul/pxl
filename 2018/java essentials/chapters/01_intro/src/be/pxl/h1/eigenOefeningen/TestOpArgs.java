@@ -1,4 +1,4 @@
-package be.pxl.h1;
+package be.pxl.h1.eigenOefeningen;
 
 public class TestOpArgs {
     public static void main(String[] args) {

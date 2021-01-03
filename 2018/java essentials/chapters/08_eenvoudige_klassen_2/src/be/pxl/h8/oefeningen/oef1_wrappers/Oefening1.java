@@ -49,7 +49,9 @@ public class Oefening1 {
                     System.out.println((Long) o - Long.MIN_VALUE);
                 }
             } else if (o instanceof Double) {
-                System.out.println(" is een double en het aantal cijfers na de komma is " + (o.toString().length() - o.toString().indexOf(".") - 1) + " en voor de komma is " + o.toString().indexOf("."));
+                System.out.println(" is een double en het aantal cijfers na de komma is "
+                        + (o.toString().length() - o.toString().indexOf(".") - 1)
+                        + " en voor de komma is " + o.toString().indexOf("."));
             }
             // iets anders
         }
