@@ -3,7 +3,7 @@ package be.pxl.h8.opdrachten;
 import java.time.DayOfWeek;
 import java.util.Scanner;
 
-public class Opdracht7 {
+public class Opdracht7_dayOfWeek {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("geef een dagnummer in");
