@@ -1,4 +1,4 @@
-package be.pxl.h8.opdrachten.opdr05_lists;
+package be.pxl.h8.opdrachten.op05_lists;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package be.pxl.h8.oefeningen.oef2;
+package be.pxl.h8.oefeningen.oef02;
 
 import java.util.ArrayList;
 import java.util.Scanner;

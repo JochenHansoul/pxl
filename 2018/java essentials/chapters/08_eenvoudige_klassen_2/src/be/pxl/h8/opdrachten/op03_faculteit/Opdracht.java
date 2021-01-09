@@ -3,7 +3,7 @@ package be.pxl.h8.opdrachten.op03_faculteit;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Opdracht3_faculteit {
+public class Opdracht {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("geef een getal in");

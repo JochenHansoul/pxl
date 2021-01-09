@@ -1,4 +1,4 @@
-package be.pxl.h8.oefeningen.oef1_wrappers;
+package be.pxl.h8.oefeningen.oef01_wrappers;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -6,16 +6,16 @@ public class Point {
     private int y;
 
     public Point(int x, int y) {
-        this.x = Math.abs(x);
-        this.y = Math.abs(y);
+        this.x = Math.min(Math.abs(x), MAXIMUM_SIZE);
+        this.y = Math.min(Math.abs(y), MAXIMUM_SIZE);
     }
 
     public void setX(int x) {
-        this.x = Math.abs(x);
+        this.x = Math.min(Math.abs(x), MAXIMUM_SIZE);
     }
 
     public void setY(int y) {
-        this.y = Math.abs(y);
+        this.y = Math.min(Math.abs(y), MAXIMUM_SIZE);
     }
 
     public int getX() {

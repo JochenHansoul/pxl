@@ -4,7 +4,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
-public class Opdracht6_classInstantBis {
+public class OpdrachtBis {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Instant voor = Instant.now();

@@ -2,7 +2,7 @@ package be.pxl.h8.opdrachten.op08_birthdate;
 
 import java.time.LocalDate;
 
-public class Opdracht8_birthdate {
+public class Opdracht {
     public static void main(String[] args) {
         LocalDate geboorteDatum = LocalDate.of(1997, 5, 22);
         // hoeveelste dag v/h jaar

@@ -1,4 +1,4 @@
-package be.pxl.h8.wrappers;
+package be.pxl.h8.eigenOefeningen.wrappers;
 
 public class ConversieMethoden {
     public static void main(String[] args) {
