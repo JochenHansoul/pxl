@@ -19,8 +19,8 @@ public class Opdracht {
         DateTimeFormatter formatter3 = DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy");
         System.out.println(formatter3.format(datum));
         // 2de manier => printf
-        System.out.printf("%tA %td %tB %tY", datum, datum, datum, datum);
-        System.out.printf("%1%tA %1%td %1%tB %1%tY", datum);
+        System.out.printf("%tA %td %tB %tY%n", datum, datum, datum, datum);
+        System.out.printf("%1$tA %1$td %1$tB %1$tY%n", datum);
         input.close();
     }
 }
