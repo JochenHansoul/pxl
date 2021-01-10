@@ -1,27 +1,45 @@
 package be.pxl.h8.oefeningen.oef02;
 
 import java.util.ArrayList;
+import java.util.OptionalDouble;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Oefening2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int aantal;
-        int minimum = 1;
-        int maximum = 0;
-        String[] arrayWaarden = {"0", "1", "2"};
-        String drieWaarden = "";
+        Random random = new Random();
         System.out.println("Geef het aantal getallen, de minimumwaarde en de maximumwaarde in");
-        input.nextLine();
-        while (minimum < maximum) {
-            arrayWaarden = drieWaarden.split(" ");
-            minimum = Integer.parseInt(arrayWaarden[1]);
-            maximum = Integer.parseInt(arrayWaarden[2]);
+        String[] values = input.nextLine().split(" ");
+        while (values.length != 3) {
+            System.out.println("Geef het aantal getallen, de minimumwaarde en de maximumwaarde in");
+            values = input.nextLine().split(" ");
         }
-        aantal = Integer.parseInt(arrayWaarden[0]);
-        ArrayList<Integer> waarden = new ArrayList<Integer>();
-        for (int i = 0; i < aantal; i++) {
+        int amount = Integer.parseInt(values[0]);
+        int min = Integer.parseInt(values[1]);
+        int max = Integer.parseInt(values[2]);
 
+        System.out.println("aantal getallen " + amount);
+        if (min > max) {
+            int temp = min;
+            min = max;
+            max = temp;
+            System.out.println("kleinste getal (na wisseling) " + min);
+            System.out.println("grootste getal (na wisseling) " + max);
+        }
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        int difference = max - min;
+        for (int i = 0; i < amount; i++) {
+            int n = random.nextInt(difference) + min;
+            numbers.add(n);
+            System.out.println(n);
+        }
+        OptionalDouble optionalDouble = numbers.stream().mapToDouble(i -> i).average();
+        if (optionalDouble.isPresent()) {
+            System.out.println("het gemiddelde is: " + optionalDouble.getAsDouble());
+        } else {
+            System.out.println("het gemiddelde is unknown");
         }
         input.close();
     }
