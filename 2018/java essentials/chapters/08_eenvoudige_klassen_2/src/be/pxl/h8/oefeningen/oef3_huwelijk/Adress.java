@@ -3,13 +3,13 @@ package be.pxl.h8.oefeningen.oef3_huwelijk;
 public class Adress {
     private String straat;
     private String huisNummer;
-    private Gemeente gemeente;
+    private Township gemeente;
 
     // constructors
     public Adress(String straat, String huisNummer,int postcode, String gemeenteNaam) {
         this.straat = straat;
         this.huisNummer = huisNummer;
-        this.gemeente = new Gemeente(postcode, gemeenteNaam);
+        this.gemeente = new Township(postcode, gemeenteNaam);
     }
 
     // setters
@@ -27,7 +27,7 @@ public class Adress {
     public String getHuisNummer() {
         return huisNummer;
     }
-    public Gemeente getGemeente() {
+    public Township getGemeente() {
         return gemeente;
     }
 

@@ -1,7 +1,13 @@
 package be.pxl.h8.oefeningen.oef3_huwelijk;
 
+import java.util.ArrayList;
+
 public class HuwelijkApp {
     public static void main(String[] args) {
+        ArrayList<Character> list = new ArrayList<>();
+        list.add('a');
+        list.add('b');
+        System.out.println(String.valueOf(list));
         // persoon 1
         Persoon Jef = new Persoon();
         System.out.println("persoon 1: " + Jef.toString());
@@ -10,8 +16,8 @@ public class HuwelijkApp {
         System.out.println("persoon 1 na toevoeging voornamen: " + Jef.getVoornaam());
         Jef.getAdress().setStraat("Draaistraat");
         Jef.getAdress().setHuisNummer("2020A");
-        Jef.getAdress().getGemeente().setPostcode(100);
-        Jef.getAdress().getGemeente().setGemeenteNaam("Wachtebeke");
+        Jef.getAdress().getGemeente().setPostalCode(100);
+        Jef.getAdress().getGemeente().setName("Wachtebeke");
         System.out.println("persoon 1 adres: " + Jef.getAdress());
         System.out.println();
 
