@@ -12,11 +12,12 @@ public class Person {
     public Person() {
         this("Aerts", "Jef", 21990, 11, 29, "Lindestraat", "23D", 3500, "Hasselt");
     }
-    public Person(String naam, String voornaam, int jaar, int maand, int dag, String straat, String huisnummer, int postcode, String gemeente) {
-        this.lastName = naam;
-        this.firstName = voornaam;
-        this.birthDate = LocalDate.of(jaar, maand, dag);
-        this.address = new Address(straat, huisnummer, postcode, gemeente);
+
+    public Person(String lastName, String firstName, int year, int month, int day, String street, String number, int postcode, String townshipName) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.birthDate = LocalDate.of(year, month, day);
+        this.address = new Address(street, number, postcode, townshipName);
     }
 
     // setters
