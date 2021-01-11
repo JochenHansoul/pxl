@@ -23,18 +23,23 @@ public class Township {
     }
     public void setName(String name) {
         // all numbers are removes, all uppercase characters are set to lower
-        // (except the first and after " ", "'", "-" or "*")
-        name = name.replaceAll("[0-9]", "");
-        name = name.toLowerCase();
+        // (except after the ones in the charAfterThisNeedsToBeUpper)
+        name = name.replaceAll("[0-9]", "").toLowerCase();
         StringBuilder nameBuilder = new StringBuilder();
         char previousChar = ' ';
         for (char c : name.toCharArray()) {
-            if (Character.isLetter(c)
-                    && (previousChar == ' ' || previousChar == '*' || previousChar == '\'' || previousChar == '-')) {
-                nameBuilder.append(Character.toUpperCase(c));
-            } else {
-                nameBuilder.append(c);
+            if (Character.isLetter(c)) {
+                boolean containsChar = false;
+                int counter = 0;
+                while (counter < charAfterThisNeedsToBeUpper.length && !containsChar) {
+                    if (previousChar == charAfterThisNeedsToBeUpper[counter]) {
+                        c = Character.toUpperCase(c);
+                        containsChar = true;
+                    }
+                    counter++;
+                }
             }
+            nameBuilder.append(c);
             previousChar = c;
         }
         this.name = nameBuilder.toString();
