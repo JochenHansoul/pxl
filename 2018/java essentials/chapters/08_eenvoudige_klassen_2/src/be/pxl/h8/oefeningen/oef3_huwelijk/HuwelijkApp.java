@@ -9,24 +9,24 @@ public class HuwelijkApp {
         list.add('b');
         System.out.println(String.valueOf(list));
         // persoon 1
-        Persoon Jef = new Persoon();
+        Person Jef = new Person();
         System.out.println("persoon 1: " + Jef.toString());
         String [] voornamen = new String[] {"Sloppie", "Wim", "Tim", "Ivan"};
-        Jef.voegVoornaamToe(voornamen);
-        System.out.println("persoon 1 na toevoeging voornamen: " + Jef.getVoornaam());
-        Jef.getAdress().setStreet("Draaistraat");
-        Jef.getAdress().setNumber("2020A");
-        Jef.getAdress().getTownship().setPostcode(100);
-        Jef.getAdress().getTownship().setName("Wachtebeke");
-        System.out.println("persoon 1 adres: " + Jef.getAdress());
+        Jef.addFirstName(voornamen);
+        System.out.println("persoon 1 na toevoeging voornamen: " + Jef.getFirstName());
+        Jef.getAddress().setStreet("Draaistraat");
+        Jef.getAddress().setNumber("2020A");
+        Jef.getAddress().getTownship().setPostcode(100);
+        Jef.getAddress().getTownship().setName("Wachtebeke");
+        System.out.println("persoon 1 adres: " + Jef.getAddress());
         System.out.println();
 
         // persoon 2
-        Persoon jochenHansoul = new Persoon("Hansoul", "Jochen", 1990, 5, 11, "Langenakker", "47b", 3830, "wellen");
+        Person jochenHansoul = new Person("Hansoul", "Jochen", 1990, 5, 11, "Langenakker", "47b", 3830, "wellen");
         System.out.println("persoon 2: " + jochenHansoul.toString());
-        jochenHansoul.setGeboortedatum(jochenHansoul.getGeboortedatum().withDayOfMonth(25));
-        System.out.println("Geboortedatum persoon 2: " + jochenHansoul.getGeboortedatum().toString());
-        System.out.println("Adres persoon 2: " + jochenHansoul.getAdress().toString());
+        jochenHansoul.setBirthDate(jochenHansoul.getBirthDate().withDayOfMonth(25));
+        System.out.println("Geboortedatum persoon 2: " + jochenHansoul.getBirthDate().toString());
+        System.out.println("Adres persoon 2: " + jochenHansoul.getAddress().toString());
         System.out.println();
 
         // huwelijk
