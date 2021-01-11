@@ -1,25 +1,25 @@
 package be.pxl.h8.oefeningen.oef3_huwelijk;
 
 public class Township {
-    private final char[] charAfterThisNeedsToBeUpper = new char[]{' ', '*', '\'', '-'};
-    private int postalCode;
+    private static final char[] charAfterThisNeedsToBeUpper = new char[]{' ', '*', '\'', '-'};
+    private int postcode;
     private String name;
 
     // constructors
     public Township(int postcode, String name) {
-        setPostalCode(postcode);
+        setPostcode(postcode);
         setName(name);
     }
 
     // setters
-    public void setPostalCode(int postalCode) {
-        while (postalCode > 9999) {
-            postalCode /= 10;
+    public void setPostcode(int postcode) {
+        while (postcode > 9999) {
+            postcode /= 10;
         }
-        while (postalCode < 1000) {
-            postalCode *= 10;
+        while (postcode < 1000) {
+            postcode *= 10;
         }
-        this.postalCode = postalCode;
+        this.postcode = postcode;
     }
     public void setName(String name) {
         // all numbers are removes, all uppercase characters are set to lower
@@ -46,8 +46,8 @@ public class Township {
     }
 
     // getters
-    public int getPostalCode() {
-        return postalCode;
+    public int getPostcode() {
+        return postcode;
     }
     public String getName() {
         return name;
@@ -55,6 +55,6 @@ public class Township {
 
     // methoden
     public String toString() {
-        return postalCode + " " + name;
+        return postcode + " " + name;
     }
 }

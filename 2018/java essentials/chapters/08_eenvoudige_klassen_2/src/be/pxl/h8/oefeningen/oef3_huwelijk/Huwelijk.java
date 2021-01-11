@@ -32,7 +32,7 @@ public class Huwelijk {
         partner2.setAdress(persoon.getAdress());
     }
     public void adresWijziging(String straat, String huisnummer, int postcode, String gemeente) {
-        partner1.setAdress(new Adress(straat, huisnummer, postcode, gemeente));
+        partner1.setAdress(new Address(straat, huisnummer, postcode, gemeente));
         autoAdresAanpassing(partner1);
     }
     public void print() {

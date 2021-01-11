@@ -6,7 +6,7 @@ public class Persoon {
     private String naam;
     private String voornaam;
     private LocalDate geboortedatum;
-    private Adress adress;
+    private Address adress;
 
     // constructors
     public Persoon() {
@@ -16,7 +16,7 @@ public class Persoon {
         this.naam = naam;
         this.voornaam = voornaam;
         this.geboortedatum = LocalDate.of(jaar, maand, dag);
-        this.adress = new Adress(straat, huisnummer, postcode, gemeente);
+        this.adress = new Address(straat, huisnummer, postcode, gemeente);
     }
 
     // setters
@@ -29,7 +29,7 @@ public class Persoon {
     public void setGeboortedatum(LocalDate date) {
         this.geboortedatum = date;
     }
-    public void setAdress(Adress adress) {
+    public void setAdress(Address adress) {
         this.adress = adress;
     }
 
@@ -40,7 +40,7 @@ public class Persoon {
     public String getVoornaam() {
         return voornaam;
     }
-    public Adress getAdress() {
+    public Address getAdress() {
         return adress;
     }
     public LocalDate getGeboortedatum() {

@@ -14,10 +14,10 @@ public class HuwelijkApp {
         String [] voornamen = new String[] {"Sloppie", "Wim", "Tim", "Ivan"};
         Jef.voegVoornaamToe(voornamen);
         System.out.println("persoon 1 na toevoeging voornamen: " + Jef.getVoornaam());
-        Jef.getAdress().setStraat("Draaistraat");
-        Jef.getAdress().setHuisNummer("2020A");
-        Jef.getAdress().getGemeente().setPostalCode(100);
-        Jef.getAdress().getGemeente().setName("Wachtebeke");
+        Jef.getAdress().setStreet("Draaistraat");
+        Jef.getAdress().setNumber("2020A");
+        Jef.getAdress().getTownship().setPostcode(100);
+        Jef.getAdress().getTownship().setName("Wachtebeke");
         System.out.println("persoon 1 adres: " + Jef.getAdress());
         System.out.println();
 
