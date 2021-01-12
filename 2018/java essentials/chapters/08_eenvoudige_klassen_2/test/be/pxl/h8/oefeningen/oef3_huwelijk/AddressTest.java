@@ -15,19 +15,29 @@ public class AddressTest {
     }
 
     @Test
-    public void testConstructorWithoutTownshipObject() {
+    public void testGetStreet() {
         assertEquals("straat", address.getStreet());
+    }
+
+    @Test
+    public void testGetAddress() {
         assertEquals("1a", address.getNumber());
+    }
+
+    @Test
+    public void testGetPostcode() {
         assertEquals(1000, address.getTownship().getPostcode());
+    }
+
+    @Test
+    public void testGetTownshipName() {
         assertEquals("Wellen", address.getTownship().getName());
     }
 
     @Test
-    public void testConstructorWithTownshipObject() {
+    public void testGetTownship() {
         Township township = new Township(1000, "Wellen");
         Address address = new Address("straat", "1a", township);
-        assertEquals("straat", address.getStreet());
-        assertEquals("1a", address.getNumber());
         assertEquals(township, address.getTownship());
     }
 
