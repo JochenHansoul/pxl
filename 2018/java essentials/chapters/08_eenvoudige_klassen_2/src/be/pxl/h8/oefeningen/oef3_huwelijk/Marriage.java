@@ -13,8 +13,7 @@ public class Marriage {
         this.secondPartner = secondPartner;
         date = LocalDate.of(jaar, maand, dag);
         autoAddressAdjustment(firstPartner);
-        System.out.println(firstPartner.getFirstName() + " " + firstPartner.getLastName() + " en " + secondPartner.getFirstName()
-                + " " + secondPartner.getLastName() + " zijn gehuwd op " + date + ". Proficiat!");
+        System.out.println(firstPartner.getFullName() + " en " + secondPartner.getFullName() + " zijn gehuwd op " + date + ". Proficiat!");
     }
 
     // getters
@@ -29,11 +28,11 @@ public class Marriage {
     }
 
     // methoden
-    private void autoAddressAdjustment(Person persoon) {
-        secondPartner.setAddress(persoon.getAddress());
+    private void autoAddressAdjustment(Person person) {
+        secondPartner.setAddress(person.getAddress());
     }
-    public void addressAdjustment(String straat, String huisnummer, int postcode, String gemeente) {
-        firstPartner.setAddress(new Address(straat, huisnummer, postcode, gemeente));
+    public void addressAdjustment(String street, String number, int postcode, String townshipName) {
+        firstPartner.setAddress(new Address(street, number, postcode, townshipName));
         autoAddressAdjustment(firstPartner);
     }
     public void print() {
