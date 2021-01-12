@@ -1,11 +1,10 @@
 <?php
 
+$i = 0;
+echo $i . "\n";
 function testFunction()
 {
-	$i = 0;
+	$i = 1;
 }
-
-$i = 1;
-echo $i . "\n";
 testFunction();
-echo $i;
+echo $i . "\n";
