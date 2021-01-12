@@ -65,6 +65,6 @@ public class Person {
         this.firstName += firstNameBuilder.toString();
     }
     public String toString() {
-        return String.format("%s %s\n%s ", firstName, lastName, address);
+        return String.format("%s %s\n%s", firstName, lastName, address);
     }
 }
