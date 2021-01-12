@@ -38,10 +38,10 @@ public class HuwelijkApp {
         System.out.println();
 
         // huwelijk
-        Huwelijk huwelijk1 = new Huwelijk(Jef, jochenHansoul, 2015, 6, 4);
-        System.out.println("Het huwelijksjaar is " + huwelijk1.getHuwelijksdatum());
-        System.out.println("Partner 1: " + huwelijk1.getPartner1());
-        huwelijk1.adresWijziging("Lentestraat", "15C", 3500, "Hasselt");
+        Marriage huwelijk1 = new Marriage(Jef, jochenHansoul, 2015, 6, 4);
+        System.out.println("Het huwelijksjaar is " + huwelijk1.getDate());
+        System.out.println("Partner 1: " + huwelijk1.getFirstPartner());
+        huwelijk1.addressAdjustment("Lentestraat", "15C", 3500, "Hasselt");
         System.out.println();
         huwelijk1.print();
     }
