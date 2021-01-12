@@ -32,8 +32,8 @@ public class Marriage {
     private void autoAddressAdjustment(Person person) {
         secondPartner.setAddress(person.getAddress());
     }
-    public void addressAdjustment(String street, String number, int postcode, String townshipName) {
-        firstPartner.setAddress(new Address(street, number, postcode, townshipName));
+    public void addressAdjustment(Address address) {
+        firstPartner.setAddress(address);
         autoAddressAdjustment(firstPartner);
     }
     public void print() {

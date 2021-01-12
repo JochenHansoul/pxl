@@ -1,21 +1,15 @@
 package be.pxl.h8.oefeningen.oef3_huwelijk;
 
 public class Address {
-    private Township township;
     private String street;
     private String number;
+    private Township township;
 
     // constructors
-    public Address(String street, String number, int postcode, String townshipName) {
+    public Address(String street, String number, Township township) {
         this.street = street;
         this.number = number;
-        this.township = new Township(postcode, townshipName);
-    }
-
-    public Address(Township township, String street, String number) {
         this.township = township;
-        this.street = street;
-        this.number = number;
     }
 
     // setters

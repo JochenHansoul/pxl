@@ -15,9 +15,9 @@ public class Person {
                 "Aerts",
                 LocalDate.of(2019, 11, 29),
                 new Address(
-                        new Township(3500, "Hasselt"),
                         "Lindestraat",
-                        "23D"));
+                        "23D",
+                        new Township(3500, "Hasselt")));
     }
 
     public Person(String firstName, String lastName, LocalDate date, Address address) {
