@@ -1,5 +1,6 @@
 package be.pxl.h8.oefeningen.oef3_huwelijk;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class HuwelijkApp {
@@ -22,7 +23,14 @@ public class HuwelijkApp {
         System.out.println();
 
         // persoon 2
-        Person jochenHansoul = new Person("Hansoul", "Jochen", 1990, 5, 11, "Langenakker", "47b", 3830, "wellen");
+        Person jochenHansoul = new Person(
+                "Jochen",
+                "Hansoul",
+                LocalDate.of(1990, 5, 11),
+                new Address(
+                        new Township(3830, "wellen"),
+                        "Langenakker",
+                        "47b"));
         System.out.println("persoon 2: " + jochenHansoul.toString());
         jochenHansoul.setBirthDate(jochenHansoul.getBirthDate().withDayOfMonth(25));
         System.out.println("Geboortedatum persoon 2: " + jochenHansoul.getBirthDate().toString());

@@ -10,14 +10,21 @@ public class Person {
 
     // constructors
     public Person() {
-        this("Aerts", "Jef", 21990, 11, 29, "Lindestraat", "23D", 3500, "Hasselt");
+        this(
+                "Jef",
+                "Aerts",
+                LocalDate.of(2019, 11, 29),
+                new Address(
+                        new Township(3500, "Hasselt"),
+                        "Lindestraat",
+                        "23D"));
     }
 
-    public Person(String lastName, String firstName, int year, int month, int day, String street, String number, int postcode, String townshipName) {
-        this.lastName = lastName;
+    public Person(String firstName, String lastName, LocalDate date, Address address) {
         this.firstName = firstName;
-        this.birthDate = LocalDate.of(year, month, day);
-        this.address = new Address(street, number, postcode, townshipName);
+        this.lastName = lastName;
+        this.birthDate = date;
+        this.address = address;
     }
 
     // setters
