@@ -1,12 +1,26 @@
 package be.pxl.h8.oefeningen.oef3_huwelijk;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class AddressTest {
 
-    private Address address = new Address("straat", "1a", 1000, "Wellen");
+    private Address address;
+
+    @Before
+    public void initializeAddress() {
+        address = new Address("straat", "1a", 1000, "Wellen");
+    }
+
+    @Test
+    public void testConstructorWithoutTownshipObject() {
+        assertEquals("straat", address.getStreet());
+        assertEquals("1a", address.getNumber());
+        assertEquals(1000, address.getTownship().getPostcode());
+        assertEquals("Wellen", address.getTownship().getName());
+    }
 
     @Test
     public void testConstructorWithTownshipObject() {
@@ -15,15 +29,6 @@ public class AddressTest {
         assertEquals("straat", address.getStreet());
         assertEquals("1a", address.getNumber());
         assertEquals(township, address.getTownship());
-    }
-
-    @Test
-    public void testConstructorWithoutTownshipObject() {
-        Address address = new Address("straat", "1a", 1000, "Wellen");
-        assertEquals("straat", address.getStreet());
-        assertEquals("1a", address.getNumber());
-        assertEquals(1000, address.getTownship().getPostcode());
-        assertEquals("Wellen", address.getTownship().getName());
     }
 
     @Test
@@ -40,7 +45,6 @@ public class AddressTest {
 
     @Test
     public void testToString() {
-        address = new Address("straat", "1a", 1000, "Wellen");
         assertEquals("straat 1a\n1000 Wellen", address.toString());
     }
 }
