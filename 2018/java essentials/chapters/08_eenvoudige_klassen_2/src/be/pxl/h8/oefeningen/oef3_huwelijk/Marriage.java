@@ -8,12 +8,12 @@ public class Marriage {
     private LocalDate date;
 
     // constructors
-    public Marriage(Person firstPartner, Person secondPartner, int jaar, int maand, int dag) {
+    public Marriage(Person firstPartner, Person secondPartner, LocalDate date) {
         this.firstPartner = firstPartner;
         this.secondPartner = secondPartner;
-        date = LocalDate.of(jaar, maand, dag);
+        this.date = date;
         autoAddressAdjustment(firstPartner);
-        System.out.println(firstPartner.getFullName() + " en " + secondPartner.getFullName() + " zijn gehuwd op " + date + ". Proficiat!");
+        System.out.println(this.getNames() + " zijn gehuwd op " + date + ". Proficiat!");
     }
 
     // getters
@@ -23,6 +23,7 @@ public class Marriage {
     public Person getSecondPartner() {
         return secondPartner;
     }
+    public String getNames() { return firstPartner.getFullName() + " en " + secondPartner.getFullName(); }
     public LocalDate getDate() {
         return date;
     }
