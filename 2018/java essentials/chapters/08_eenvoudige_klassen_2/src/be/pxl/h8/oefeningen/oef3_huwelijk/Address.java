@@ -6,6 +6,9 @@ public class Address {
     private Township township;
 
     // constructors
+    public Address(String street, String number, int postcode, String townshipName) {
+        this(street, number, new Township(postcode, townshipName));
+    }
     public Address(String street, String number, Township township) {
         this.street = street;
         this.number = number;

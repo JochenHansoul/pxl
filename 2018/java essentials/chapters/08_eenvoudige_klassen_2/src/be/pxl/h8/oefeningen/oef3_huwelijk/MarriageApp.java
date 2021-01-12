@@ -21,10 +21,7 @@ public class MarriageApp {
                 "Jochen",
                 "Hansoul",
                 LocalDate.of(1990, 5, 11),
-                new Address(
-                        "Langenakker",
-                        "47b",
-                        new Township(3830, "wellen")));
+                new Address("Langenakker", "47b",  3830, "wellen"));
         System.out.println("persoon 2: " + jochenHansoul.toString());
         jochenHansoul.setBirthDate(jochenHansoul.getBirthDate().withDayOfMonth(25));
         System.out.println("Geboortedatum persoon 2: " + jochenHansoul.getBirthDate().toString());
@@ -35,7 +32,7 @@ public class MarriageApp {
         Marriage marriage = new Marriage(Jef, jochenHansoul, LocalDate.of(2015, 6, 4));
         System.out.println("Het huwelijksjaar is " + marriage.getDate());
         System.out.println("Partner 1: " + marriage.getFirstPartner());
-        marriage.addressAdjustment(new Address("Lentestraat", "15C", new Township(3500, "Hasselt")));
+        marriage.addressAdjustment(new Address("Lentestraat", "15C", 3500, "Hasselt"));
         System.out.println();
         marriage.print();
     }
