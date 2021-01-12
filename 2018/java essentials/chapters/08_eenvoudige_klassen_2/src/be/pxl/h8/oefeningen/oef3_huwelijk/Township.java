@@ -1,7 +1,7 @@
 package be.pxl.h8.oefeningen.oef3_huwelijk;
 
 public class Township {
-    private static final char[] charAfterThisNeedsToBeUpper = new char[]{' ', '*', '\'', '-'};
+    public static final char[] charAfterThisNeedsToBeUpper = new char[]{' ', '*', '\'', '-'};
     private int postcode;
     private String name;
 
