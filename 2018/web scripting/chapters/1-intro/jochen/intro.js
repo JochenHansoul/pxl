@@ -1,6 +1,6 @@
 // var wel geleerd maar mag niet gebruiken, ook niet op examen
 
-// tot 2015 exma standaard
+// tot 2015 ecma standaard
 // één van redenen dat wij geen var gebruiken!
 
 console.log(a); // undefined, hij gaat helemaal naar beneden en haalt het
