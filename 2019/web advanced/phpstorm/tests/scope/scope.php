@@ -1,10 +1,11 @@
 <?php
 
-$var1 = "bring it on";
+$varGlobal;
 if (true) {
-    $var1 = "hello world";
-    echo $var1;
+    $varLocalTrue = "hello world";
 } else {
-    $var2 = "hi there";
+    $varLocalFalse = "goodbye world";
 }
-echo $var1;
+echo $varGlobal . "\n"; // undefined var
+echo $varLocalTrue . "\n";
+echo $varLocalFalse . "\n"; // undefined var
