@@ -1,11 +1,21 @@
 <?php
 
+// tests for testing wich constructor is ues
+
+declare(strict_types=1);
+
 require_once "src/BaseClass.php";
 require_once "src/SubBaseClass.php";
 require_once "src/SubAbstractClass.php";
 
-$o = new BaseClass();
+echo "BaseClass:" . "\n";
+new BaseClass();
 echo "\n";
-$so = new SubBaseClass();
+
+echo "SubBaseClass:" . "\n";
+new SubBaseClass();
 echo "\n";
-$sac = new SubAbstractClass();
+
+echo "SubAbstractClass:" . "\n";
+new SubAbstractClass();
+echo "\n";

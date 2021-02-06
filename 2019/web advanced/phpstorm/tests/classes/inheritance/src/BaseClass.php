@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 class BaseClass
 {
     public function __construct()
     {
-        echo "Base Class";
+        echo "constructor: Base Class" . "\n";
     }
 }
