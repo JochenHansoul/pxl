@@ -1,15 +1,15 @@
 <?php
 
-require_once "src/Classes/Worker.php";
-require_once "src/Constants/CONSTANT.php";
-require_once "src/OtherConstants/CONSTANT.php";
+declare(strict_types=1);
 
-use Classes\Worker;
+use const src\Constants\NUMBER;
+use const src\Constants\NUMBERS;
+use const src\OtherConstants\NUMBER as NUMBER2;
 
-use const Constants\NUMBER;
-use const OtherConstants\NUMBER as NUMBER2;
+require_once "src/Constants/NUMBER.php";
+require_once "src/Constants/NUMBERS.php";
+require_once "src/OtherConstants/NUMBER.php";
 
-$worker = new Worker();
-//echo var_dump($worker) . "\n";
-echo var_dump(NUMBER) . "\n";
-echo var_dump(NUMBER2) . "\n";
+echo NUMBER . "\n";
+echo NUMBER2 . "\n";
+echo NUMBERS["one"] . "\n";
