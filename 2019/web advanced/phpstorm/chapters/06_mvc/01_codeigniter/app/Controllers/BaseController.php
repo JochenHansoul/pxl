@@ -22,11 +22,11 @@ class BaseController extends Controller
     protected $helpers = [];
 
     //Constructor.
-    public function initController (
+    public function initController(
         RequestInterface $request,
         ResponseInterface $response,
-        LoggerInterface $logger)
-    {
+        LoggerInterface $logger
+    ) {
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
