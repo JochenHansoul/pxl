@@ -1,12 +1,10 @@
-<?php namespace Config;
+<?php
 
-/**
- * Database Configuration
- *
- * @package Config
- */
+namespace Config;
 
-class Database extends \CodeIgniter\Database\Config
+use CodeIgniter\Database\Config;
+
+class Database extends Config
 {
 	/**
 	 * The directory that holds the Migrations
@@ -32,9 +30,9 @@ class Database extends \CodeIgniter\Database\Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => '',
-		'password' => '',
-		'database' => '',
+		'username' => 'student',
+		'password' => 'pxl',
+		'database' => 'oefpdo',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
