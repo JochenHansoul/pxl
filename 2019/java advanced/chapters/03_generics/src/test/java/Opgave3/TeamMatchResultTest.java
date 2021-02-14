@@ -2,8 +2,11 @@ package Opgave3;
 
 //import org.junit.jupiter.api.Test;
 
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+
 public class TeamMatchResultTest {
-	/*
 	@Test
 	public void testOurTeamLostTest() {
 		Team<SoccerPlayer> ourTeam = new Team<>("OurTeam");
@@ -54,5 +57,4 @@ public class TeamMatchResultTest {
 		assertEquals(1, opponentTeam.getTied());
 		assertEquals(0, opponentTeam.getLost());
 	}
-*/
 }

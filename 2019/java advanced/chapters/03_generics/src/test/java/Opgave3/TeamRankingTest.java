@@ -1,7 +1,10 @@
 package Opgave3;
 
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+
 public class TeamRankingTest {
-	/*
 	private static final Team<SoccerPlayer> OPPONENT = new Team<>("Oponent");
 
 	@Test
@@ -10,7 +13,7 @@ public class TeamRankingTest {
 		ourTeam.matchResult(OPPONENT, 9, 5);
 		assertEquals(3, ourTeam.ranking());
 	}
-	
+
 	@Test
 	public void testOnePointForGameTied() {
 		Team<SoccerPlayer> ourTeam = new Team<>("OurTeam");
@@ -35,5 +38,4 @@ public class TeamRankingTest {
 		ourTeam.matchResult(OPPONENT, 5, 5);
 		assertEquals(8, ourTeam.ranking());
 	}
-	*/
 }

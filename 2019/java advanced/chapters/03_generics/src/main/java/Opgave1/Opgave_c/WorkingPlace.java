@@ -28,5 +28,4 @@ public class WorkingPlace<T extends Vehicle & Motorized> {
 	public int getNumberOfThingsFixed() {
 		return numberOfThingsFixed;
 	}
-
 }

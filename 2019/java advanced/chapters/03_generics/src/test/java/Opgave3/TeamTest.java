@@ -1,6 +1,8 @@
-/*package Opgave3;
+package Opgave3;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 public class TeamTest {
     @Test
@@ -20,4 +22,4 @@ public class TeamTest {
         soccerTeam.addPlayer(player);
         assertEquals(1, soccerTeam.numberOfPlayers());
     }
-}*/
+}
