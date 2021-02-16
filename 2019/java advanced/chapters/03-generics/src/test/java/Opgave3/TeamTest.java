@@ -2,7 +2,7 @@ package Opgave3;
 
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TeamTest {
     @Test

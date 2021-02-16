@@ -1,8 +1,10 @@
 package oefening1;
 
 import org.junit.Before;
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
+import org.testng.annotations.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.time.DateTimeException;
 
@@ -16,13 +18,15 @@ public class PersonTest {
 
     @Test
     public void dateExceptionTest() {
-        Assertions.assertThrows(DateTimeException.class, ()-> {
+        assertThrows(DateTimeException.class, ()-> {
             new Person("name", 2000, 0, 1);
         });
     }
 
     @Test
     public void person_getNameTest() {
-        Assertions.assertEquals("name", person.getName());
+        if (person != null) {
+            assertEquals("name", person.getName());
+        }
     }
 }

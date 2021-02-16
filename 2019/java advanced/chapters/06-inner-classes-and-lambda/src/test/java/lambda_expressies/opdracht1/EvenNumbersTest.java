@@ -1,6 +1,6 @@
 package lambda_expressies.opdracht1;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
