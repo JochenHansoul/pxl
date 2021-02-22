@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Welkom</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="styles/style.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+<div class="page-header p-3 mb-2 bg-primary text-white">
+    <img src="resources/logo%20codeDojoBelgium.png" class="rounded mx-auto d-block" alt="coderDojo logo">
+</div>
+<div id="app" class="text-center">
+    <h1 class="title">Welkom bij CoderDojo Hasselt</h1>
+    <h2 class="title">Is dit je eerste keer?</h2>
+    <div>
+        <button v-on:click="goToRegister()">Ja</button>
+        <button v-on:click="goToLogin()">Nee</button>
+        <output> {{ status }} </output>
+        <output>{{ error }}</output>
+    </div>
+    <p>Wil je een overzicht van alle enthousiaste Coderdojo's?</p>
+    <button v-on:click="goToOverview()">Overzicht</button>
+</div>
+</body>
+</html>

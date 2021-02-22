@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:v-model="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registratiescherm</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script type="module" src="scripts/register.js"></script>
+</head>
+<body>
+<div class="page-header p-3 mb-2 bg-primary text-white">
+    <img src="resources/logo%20codeDojoBelgium.png" class="rounded mx-auto d-block" alt="coderDojo logo">
+</div>
+<div id="app" class="text-center">
+    <h1 class="title">Registratie</h1>
+    <form class="form-horizontal">
+        <div id="registration-fields">
+            <div class = "form-group">
+                <label for="first-name">Voornaam</label>
+                <br/>
+                <input type="text" id="first-name" v-model:value="person.firstName"/>
+                <div v-if="errorFirstName">gelieve uw voornaam in te vullen</div>
+                <div v-else="errorFirstName">
+                    <div v-if="errorFirstNameChar">karakters {{ invalidCharacters }} zijn niet toegestaan</div>
+                </div>
+            </div>
+            <div class = "form-group">
+                <label for="last-name">Achternaam</label>
+                <br/>
+                <input type="text" id="last-name" v-model:value="person.lastName"/>
+                <div v-if="errorLastName">gelieve uw achternaam in te vullen</div>
+                <div v-else="errorLastName">
+                    <div v-if="errorLastNameChar">karakters {{invalidCharacters}} zijn niet toegestaan</div>
+                </div>
+            </div>
+            <div class = "form-group">
+                <label for="age">Leeftijd</label>
+                <br/>
+                <input type="number" id="age" v-model:value="person.age"/>
+                <div v-if="errorAge">gelieve uw leeftijd in te vullen</div>
+                <div v-else="errorAge">
+                    <div v-if="errorMinimumAge">De minimumleeftijd is {{ minimumAge }} jaar</div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="clear"></div>
+    <br>
+    <input type="button" id="button-register" v-on:click="addPerson()" value="Registreer"/>
+    <br>
+    <output>{{ error.message }}</output>
+</div>
+</body>
+</html>

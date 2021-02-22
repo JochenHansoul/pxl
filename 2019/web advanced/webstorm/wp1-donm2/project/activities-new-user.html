@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-model="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Activiteiten nieuwe gebruiker</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuex/dist/vuex.js" defer></script>
+    <script type="module" src="scripts/activities.js"></script>
+</head>
+<body class="text-center">
+<div class="page-header p-3 mb-2 bg-primary text-white">
+    <img src = "resources/logo%20codeDojoBelgium.png" class="rounded mx-auto d-block" alt="coderDojo logo">
+</div>
+<div id="app">
+    <h1>Hoi {{ firstName }}</h1>
+    <h3>Ben je klaar voor heel wat coding fun? </h3>
+
+    <h3 class="text-left p-4">Hoe werkt het? </h3>
+
+    <p class="text-left p-4">Hieronder vind je per activiteit een korte beschrijving met alsook de moeilijkheidsgraad. De bedoeling is
+    dat je interessante activiteiten toevoegd aan jouw profiel. Wanneer je een volgende keer terug komt, weet je nog perfect
+    met welke activiteit je bezig was, of welke je reeds het voltooid.</p>
+
+    <h3 class="text-left p-4">Have fun!</h3>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./resources/scratch.png" class="card-img-top" alt="scratch">
+                <div class="card-body">
+                    <h5 class="card-title">Scratch - beginner </h5>
+                    <p class="card-text">Met Scratch kan visualisaties zoals interactieve verhalen, animaties, spellen, muziek en kunst
+                        maken. Het bijzondere aan deze programmeertaal is dat het werkt met blokjes in plaats van tekst. De onderdelen van een programma moet je als legosteentjes in
+                        elkaar laten passen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./resources/legoMindstorms.jpg" class="card-img-top" alt="lego Mindstorms">
+                <div class="card-body">
+                    <h5 class="card-title">Lego Mindstorms - gemiddeld/moeilijk </h5>
+                    <p class="card-text">Met Lego Mindstorms bouw je een robot die je zelf kan programmeren. Om de robot te laten bewegen
+                        moet je een programma schrijven. Als het goed is doet de robot precies wat jij wilt.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./resources/python.png" class="card-img-top" alt="Python">
+                <div class="card-body">
+                    <h5 class="card-title">Python - moeilijk </h5>
+                    <p class="card-text">Python is ontwikkeld met het oog op leesbare code. Hieruit vloeit haar "zuivere" stijl
+                        voort. Met weinig woorden kan men veel zeggen. Dit uit zich op verschillende manieren.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br/>
+
+    <!--output all the activities of the current person-->
+    <div v-if="this.activitiesCurrentPerson.length > 0">
+        <activities-table v-bind:activities="activitiesCurrentPerson" id="activityTable"></activities-table>
+    </div>
+    <output>{{ error.message }}</output>
+
+    <br/>
+
+    <!-- output of all the activities a user can chose from and options to add them to the current person-->
+    <div v-if="addActivityBool">
+        <!--is used to filter the activities-->
+        <label for="category-names">categories: </label>
+        <select id="category-names" v-model:selected="categoryId" v-on:change="selectCategory(2)"><!--v-on:select="selectCategory"-->
+            <option v-for="category in categories" :value="category.id">{{ category.name }}</option>
+        </select>
+
+        <!--label for the activities-->
+        <label for="all-activities">activiteiten: </label>
+        <select id="all-activities">
+            <option v-for="activity in activitiesFilteredByCategory" :value="activity.id">{{ activity.name }}</option><!--activitiesOfCategory-->
+        </select>
+
+        <button v-on:click="addActivity">add this activity</button>
+    </div>
+    <div v-else>
+        <button v-on:click="getAllActivities">Voeg activiteiten toe</button>
+    </div>
+
+    <button v-on:click="logOut()">uitloggen</button>
+</div>
+</body>
+</html>

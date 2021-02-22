@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:v-model="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script type="module" src="scripts/login.js" defer></script>
+</head>
+<body class="text-center">
+<div class="page-header p-3 mb-2 bg-primary text-white">
+    <img src = "resources/logo%20codeDojoBelgium.png" class="rounded mx-auto d-block" alt="coderDojo logo">
+</div>
+<div id="app">
+    <h1 class="title">Log in</h1>
+
+    <label for="first-name">Voornaam: </label>
+    <br/>
+    <input type="text" id="first-name" v-model:value="firstName"/>
+    <br/>
+    <label for="last-name">Achternaam: </label>
+    <br/>
+    <input type="text" id="last-name" v-model:value="lastName"/>
+    <br/>
+    <button v-on:click="login()">Log in</button>
+    <br/>
+    <output>{{ error }}</output>
+</div>
+</body>
+</html>

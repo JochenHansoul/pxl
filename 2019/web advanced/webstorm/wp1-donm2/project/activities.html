@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-model="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Activiteiten</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuex/dist/vuex.js" defer></script>
+    <script type="module" src="scripts/activities.js"></script>
+</head>
+<body class="text-center">
+<div class="page-header p-3 mb-2 bg-primary text-white">
+    <img src="resources/logo%20codeDojoBelgium.png" class="rounded mx-auto d-block" alt="coderDojo logo">
+</div>
+<div id="app">
+    <h1>Hoi {{ firstName }}</h1>
+    <h3>Fijn dat je er bent!</h3>
+    <p>Hier zijn al jouw gedane activiteiten</p>
+
+    <!--output all the activities of the current person-->
+    <div v-if="this.activitiesCurrentPerson.length > 0">
+        <activities-table v-bind:activities="activitiesCurrentPerson" id="activityTable"></activities-table>
+    </div>
+    <output>{{ error.message }}</output>
+
+    <br>
+    <br>
+
+    <!-- output of all the activities a user can chose from and options to add them to the current person-->
+    <div v-if="addActivityBool">
+        <!--is used to filter the activities-->
+        <label for="category-names">categories: </label>
+        <select id="category-names" v-model:selected="categoryId" v-on:change="selectCategory()"><!--v-on:select="selectCategory"-->
+            <option v-for="category in categories" :value="category.id">{{ category.name }}</option>
+        </select>
+
+        <!--label for the activities-->
+        <label for="all-activities">activiteiten: </label>
+        <select id="all-activities">
+            <option v-for="activity in activitiesFilteredByCategory" :value="activity.id">{{ activity.name }}</option><!--activitiesOfCategory-->
+        </select>
+
+        <button v-on:click="addActivity">add this activity</button>
+    </div>
+    <div v-else>
+        <button v-on:click="getAllActivities">Voeg activiteiten toe</button>
+    </div>
+
+    <button v-on:click="logOut()">uitloggen</button>
+</div>
+</body>
+</html>

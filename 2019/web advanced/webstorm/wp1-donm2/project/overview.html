@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-model="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script type="module" src="scripts/overview.js"></script>
+    <title>Overzicht</title>
+</head>
+<body class="text-center">
+<div class="page-header p-3 mb-2 bg-primary text-white">
+    <img src = "resources/logo%20codeDojoBelgium.png" class="rounded mx-auto d-block" alt="coderDojo logo">
+</div>
+<div id="app">
+    <table id="overviewTable">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>voornaam</th>
+            <th>achternaam</th>
+            <th>leeftijd</th>
+        </tr>
+        </thead>
+        <tbody id="personsTable">
+        <tr v-for="person in persons">
+            <td>{{ person.id }}</td>
+            <td><input type="text" v-model:value="person.firstName"/></td>
+            <td><input type="text" v-model:value="person.lastName"/></td>
+            <td><input type="number" v-model:value="person.age"/></td>
+            <td><button v-on:click="updatePerson(person)">update</button></td>
+            <td><button v-on:click="deletePerson(person.id)">verwijder</button></td>
+            <td><button v-on:click="getActivities(person)">activiteiten</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <br/>
+    <br/>
+
+    <output>{{ errorInput }}</output>
+    <br/>
+    <output>{{ errorCharacters }}</output>
+    <br/>
+    <output>{{ errorMinimumAge }}</output>
+
+    <br/>
+    <br/>
+
+    <!--output all the activities of the current person-->
+    <div v-if="this.activitiesCurrentPerson.length > 0">
+        <h2>id {{selectedPerson.id}}: {{selectedPerson.firstName}} {{selectedPerson.lastName}}</h2>
+        <br/>
+        <activities-table v-bind:activities="activitiesCurrentPerson" id="activityTable"></activities-table>
+        <button v-on:click="deletePersonActivities()">Verwijder al deze activiteiten</button>
+    </div>
+
+    <br/>
+    <output>{{ error.message }}</output>
+    <br/>
+    <button v-on:click="goToIndex()">Terug</button>
+</div>
+</body>
+</html>
