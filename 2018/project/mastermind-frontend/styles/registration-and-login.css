@@ -1,0 +1,9 @@
+@import "general-style.css";
+
+main {
+    background: lightcyan;
+    width: 390px;
+    height: 680px;
+    padding: 20px 0 30px 90px;
+    margin: 50px auto 100px;
+}

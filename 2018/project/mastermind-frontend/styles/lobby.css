@@ -1,0 +1,162 @@
+@import "general-style.css";
+
+/* common things */
+
+main {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* ik weet niet waarom maar dit moet % zijn en niet vw */
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: 0;
+}
+
+article {
+    background: lightcyan;
+    width: 20%;
+    height: 42%;
+    margin: 0.81%;
+    padding: 1%;
+}
+
+#article--create-waiting-room {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#article--all-waiting-rooms {
+    margin-left: 0;
+    width: 73.1%;
+    height: 90.4%;
+}
+
+/* more specific things */
+img {
+    margin: 6% 0 0 3%;
+    height: 90%;
+    width: 90%;
+}
+
+#article--create-waiting-room h1 {
+    margin-bottom: 2em;
+    text-align: center;
+    color: #4f8cef;
+}
+
+form {
+    margin-left: 20px;
+}
+
+form label {
+    font-size: 1.5em;
+    margin: 0 0 0 5px;
+}
+
+form input {
+    margin-left: 0;
+    height: 25px;
+    width: 60%;
+}
+
+
+#create-button {
+    margin: 2% 0 16% 6%;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+}
+
+#article--all-waiting-rooms h1 {
+    text-align: center;
+    color: #4f8cef;
+    font-size: 2em;
+}
+
+#error-message {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* table */
+table {
+    width: 100%;
+    font-family: roboto, sans-serif;
+    font-size: 1.4em;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+#waiting-rooms-head {
+    margin: 4% auto 0 10%;
+    width: 80%;
+    background-color: #27426d;
+}
+
+#scroll-bar {
+    display: block;
+    margin: 0 auto 0 10%;
+    max-height: 75%;
+    width: 80%;
+    overflow-y: scroll;
+}
+
+/* table body rows */
+#waiting-rooms-body tr:nth-child(2n +1) {
+    background-color: #4f8cef;
+}
+
+#waiting-rooms-body tr:nth-child(2n) {
+    background-color: #6facff;
+}
+
+/* table individuele data */
+table, td {
+    border: 1px solid black;
+}
+
+/* head individuele data*/
+#waiting-rooms-head tr td {
+    font-weight: bold;
+    text-align: center;
+}
+
+#waiting-rooms-head td:nth-child(1) {
+    width: 19.75%;
+}
+
+#waiting-rooms-head td:nth-child(2) {
+    width: 9.92%;
+}
+
+#waiting-rooms-head td:nth-child(3) {
+    width: 70.23%;
+}
+
+/* body individuele data*/
+#waiting-rooms-body tr td {
+    padding-left: 1%;
+}
+
+#waiting-rooms-body td:nth-child(1) {
+    width: 20%;
+}
+
+#waiting-rooms-body td:nth-child(2) {
+    width: 10%;
+}
+
+#waiting-rooms-body td:nth-child(3) {
+    width: 70%;
+}
+
+/* pseudo selector body */
+#waiting-room-game-name:hover {
+    background-color: darkblue !important;
+    color: goldenrod !important;
+}

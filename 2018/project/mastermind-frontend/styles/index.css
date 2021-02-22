@@ -1,0 +1,61 @@
+@import "general-style.css";
+
+header {
+    margin: 0;
+    width: 100%;
+    padding: 20px 0 0 0;
+    height: 250px;
+    background-color: #6f67cd;
+}
+
+header img {
+    float: left;
+    margin-left: 10px;
+    width: 240px;
+    height: 240px;
+}
+
+header h1 {
+    font-family: "Droid Sans", monospace;
+    float: left;
+    margin-left: 60px;
+    font-size: 6em;
+}
+
+main {
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+}
+
+article p {
+    color: white;
+    width: 90%;
+}
+
+h2 {
+    color: white;
+}
+
+main article img {
+    float: right;
+    right: 5%;
+    width: 30%;
+    height: 30%;
+    size:auto;
+}
+
+
+@media screen and (max-width: 700px) {
+    main article img{
+        alignment: center;
+        display: inline-block;
+        margin: auto;
+        width: 90%;
+        height: 90%;
+    }
+
+    nav {
+        width: 95%;
+        alignment: center;
+    }
+}

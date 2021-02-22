@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mastermind - waiting room</title>
+    <link rel="stylesheet" href="styles/waiting-room.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li id="nav-lobby">Lobbies</li>
+        <li id="nav-waiting-room">Waiting Room</li>
+        <li id="nav-game-room">Game Room</li>
+    </ul>
+</nav>
+<main>
+    <img id="waiting-room-image" src="assets/logo.png" alt="Mastermind Logo" height="1128" width="1129">
+    <h1 class="title">Waiting room</h1>
+
+    <form>
+        <output id="room-id">room name</output>
+
+        <br>
+        <br>
+        <br>
+
+        <output id="error-message"></output>
+
+        <br>
+        <br>
+        <br>
+
+        <output id="user-amount">3/4</output>
+
+        <br>
+        <br>
+        <br>
+
+        <output id="room-users">Room users</output>
+
+        <br>
+        <br>
+        <br>
+
+        <input type="button" id="start-button" value="Start game">
+        <input type="button" id="leave-button" value="Leave">
+
+        <br>
+        <br>
+        <br>
+
+
+    </form>
+</main>
+<footer>
+    <p>MasterMind Groep 40</p>
+</footer>
+</body>
+<script src="scripts/waiting-room.js"></script>
+<script src="scripts/navigation-authorization.js"></script>
+</html>

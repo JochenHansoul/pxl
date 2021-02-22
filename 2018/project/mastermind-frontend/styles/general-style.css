@@ -1,0 +1,115 @@
+body {
+    background: url("../assets/backgroundtexture.jpg");
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    background-color: darkblue;
+}
+
+nav ul li {
+    font-family: "Droid Sans", sans-serif;
+    display: inline-block;
+    padding: 4px;
+    font-size: 1.6em;
+    margin: 6px 15px;
+}
+
+nav ul li a {
+    color: #5555FF;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: #5522ee;
+}
+
+nav ul li a:active {
+    color: goldenrod;
+}
+
+img {
+    height: 350px;
+    width: 350px;
+}
+
+#waiting-room-image {
+    height: 200px;
+    width: 200px;
+}
+
+h1.title {
+    font-family: "Droid Sans", monospace;
+}
+
+form label {
+    display: inline-block;
+    width: 100px;
+}
+
+/* buttons */
+#submit-button, #login-button, #create-button {
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+}
+
+/*#to-login-page, #to-registration-page {
+    margin-left: 60px;
+}*/
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    background-color: black;
+    color: white;
+}
+
+footer p {
+    font-family: "Droid Sans", monospace;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+#error-message {
+    position:relative;
+    top: 1px;
+    color: red;
+}
+
+/* makes navigation link normal colors after implementing navigation-authorization */
+.navigation-color-blue {
+    color: #5555FF;
+}
+
+.navigation-color-blue:active {
+    color: goldenrod;
+}
+
+
+@media screen and (max-width: 900px) {
+    nav ul li {
+        display: inline-block;
+        padding: 4px;
+        width: 100%;
+        font-size: 1.6em;
+        margin: 6px 15px;
+    }
+}

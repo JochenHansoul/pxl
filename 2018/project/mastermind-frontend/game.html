@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mastermind - Game</title>
+    <link rel="stylesheet" href="styles/game.css">
+
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="lobby.html">Lobbies</a></li>
+        <li><a href="waiting-room.html">Waiting Room</a></li>
+        <li><a href="game.html">Game Room</a></li>
+    </ul>
+</nav>
+<header>
+    <output id="game-over-message"></output>
+</header>
+<main>
+    <!--<img src="assets/logo.png" alt="Mastermind Logo">-->
+    <h1>Mastermind</h1>
+
+
+    <output id="waiting-on-players"></output>
+    <output id="error-message"></output>
+
+    <canvas id="canvas-mastermind" width="500" height="1500" style="border: 1px solid #000000;"></canvas>
+
+    <!-- Buttons for selecting colors and making guesses -->
+    <div id="all-buttons">
+        <button id="button-red" class="button-color" value="red">Red</button>
+        <button id="button-orange" class="button-color" value="orange">Orange</button>
+        <button id="button-yellow" class="button-color" value="yellow">Yellow</button>
+        <button id="button-green" class="button-color" value="green">Green</button>
+        <button id="button-blue" class="button-color" value="blue">Blue</button>
+        <button id="button-purple" class="button-color" value="purple">Purple</button>
+        <button id="button-brown" class="button-color" value="brown">Brown</button>
+        <button id="button-black" class="button-color" value="black">Black</button>
+
+        <button id="button-send-guess">Check </button>
+        <button id="button-remove-color"><---- </button>
+    </div>
+
+    <form action="lobby.html">
+        <input type="submit" value="Exit to Lobbies" />
+    </form>
+</main>
+<footer>
+    <p>MasterMind Groep 40</p>
+</footer>
+</body>
+<script src="scripts/game.js"></script>
+</html>

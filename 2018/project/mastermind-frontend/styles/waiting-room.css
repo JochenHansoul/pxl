@@ -1,0 +1,64 @@
+@import "general-style.css";
+
+main {
+    background: lightcyan;
+    height: 60vh;
+    width: 40vw;
+    padding: 20px 0 30px 90px;
+    margin: 50px auto 100px;
+}
+
+#waiting-room-image {
+    position: absolute;
+    padding: 2.9vw 1.5vh;
+    height: 50vh;
+    width: 35vw;
+    opacity: 0.24;
+    z-index: 0;
+}
+
+.title {
+    font-size: 2.6em;
+    color: #5522ee;
+    top: 20px;
+}
+
+/* form */
+
+#room-id {
+    position:relative;
+    padding-bottom: 20px;
+    font-size: 1.6em;
+}
+
+#user-amount {
+    position: relative;
+}
+
+
+#room-users {
+    position:relative;
+    top: -10px;
+    overflow:visible;
+}
+
+/* buttons */
+#start-button, #leave-button {
+
+
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    
+}
+
+#leave-button {
+    margin-left: 159px;
+}
+input{
+    position: fixed;
+    top: 70%;
+
+}

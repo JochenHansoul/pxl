@@ -1,0 +1,102 @@
+@import "general-style.css";
+
+main {
+    background: lightcyan;
+    width: 80%;
+    padding: 20px 0 30px 90px;
+    margin: 50px auto 40px;
+}
+
+img {
+    height: 350px;
+    width: 350px;
+}
+
+h1.title {
+    font-family: "Droid Sans", monospace;
+}
+form label {
+    display: inline-block;
+    width: 100px;
+}
+
+footer img {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+}
+canvas {
+    color: white;
+    background: beige;
+}
+
+#all-buttons{
+    float: right;
+    position: fixed;
+    bottom: 60px;
+    right: 155px;
+
+}
+
+#all-buttons button {
+    border-collapse: collapse;
+    width: 75px;
+    height: 40px;
+}
+
+#button-red {
+    background: red;
+}
+
+#button-orange {
+    background: orange;
+}
+
+#button-yellow {
+    background: yellow;
+}
+
+#button-black {
+    background: black;
+    color: white
+}
+
+#button-green {
+    background: green;
+    color: white
+}
+
+#button-blue {
+    background: blue;
+    color: white
+}
+
+#button-brown {
+    background: brown;
+    color: white
+}
+
+#button-purple {
+    background: purple;
+    color: white
+}
+
+
+#waiting-on-players {
+    float: right;
+    right: 150px;
+    font-size: 30px;
+    color: black;
+    position: fixed;
+    top: 300px;
+}
+
+#error-message {
+    color: red;
+    float: right;
+    right: 150px;
+    font-size: 30px;
+    position: fixed;
+    top: 230px;
+}

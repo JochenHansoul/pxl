@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mastermind - lobby</title>
+    <link rel="stylesheet" href="styles/lobby.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li id="nav-lobby">Lobbies</li>
+        <li id="nav-waiting-room">Waiting Room</li>
+        <li id="nav-game-room">Game Room</li>
+    </ul>
+</nav>
+<main>
+    <article id="article--image">
+        <img id="lobby-image" src="assets/logo.png" alt="Mastermind Logo" height="1128" width="1129">
+    </article>
+
+    <article id="article--create-waiting-room">
+        <h1 class="title">Create a new waiting room</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name"/>
+            <br>
+            <br>
+            <br>
+            <input type="button" id="create-button" value="Create Room">
+            <br>
+            <a id="to-index" href="index.html">Go back to home</a>
+        </form>
+    </article>
+
+    <article id="article--all-waiting-rooms">
+        <h1 class="title">Join an existing waiting room</h1>
+        <output id="error-message"></output>
+
+        <table id="waiting-rooms-head">
+        <tr>
+            <td>name</td>
+            <td>max</td>
+            <td>players</td>
+        </tr>
+        </table>
+        <div id="scroll-bar">
+            <table id="waiting-rooms-body"></table>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>MasterMind Groep 40</p>
+</footer>
+</body>
+<script src="scripts/lobby.js"></script>
+<script src="scripts/navigation-authorization.js"></script>
+</html>

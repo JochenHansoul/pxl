@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mastermind</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li id="nav-lobby">Lobbies</li>
+        <li id="nav-waiting-room">Waiting Room</li>
+        <li id="nav-game-room">Game Room</li>
+    </ul>
+</nav>
+
+<div class="clear"></div>
+<header>
+    <img src="assets/logo.png" alt="Mastermind Logo" height="1128" width="1129">
+    <h1>Mastermind</h1>
+</header>
+<div class="clear"></div>
+
+<main>
+    <article>
+        <img src="assets/Mastermind.jpg" alt="mastermind board">
+        <h2>Rules</h2>
+        <p>
+            The code maker makes a pattern of the pre-hand specified amount of code pegs.
+            Duplicates are allowed in this game.
+            The code breakers try to guess the pattern, in both order and color, within ten (standard) turns.
+            Whoever gets it in the fewest guesses, wins.
+        <p>
+        <br/>
+        <p>
+            Each guess is made by placing a row of code pegs on the decoding board.
+            Once placed, the code maker program will provide feedback by placing from zero to four key pegs in the
+            small holes of the row with the guess.
+            A colored or black key peg is placed for each code peg from the guess which is correct in both
+            color and position.
+            A white key peg indicates the existence of a correct color code peg placed in the wrong position.
+        </p>
+        <br/>
+        <p>
+            If there are duplicate colours in the guess, they cannot all be awarded a key peg unless
+            they correspond to the same number of duplicate colours in the hidden code.
+            For example,if the hidden code is red-red-black-black and the player guesses red-red-red-black,
+            the code maker will award two colored key pegs for the two correct whites,
+            no indication is given of the fact that the code also includes a second black.
+        </p>
+    </article>
+</main>
+
+<footer>
+    <p>MasterMind Groep 40</p>
+</footer>
+</body>
+<script src="scripts/navigation-authorization.js"></script>
+</html>
