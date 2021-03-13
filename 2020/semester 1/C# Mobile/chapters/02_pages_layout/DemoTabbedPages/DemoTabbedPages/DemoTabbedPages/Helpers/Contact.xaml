@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoTabbedPages.Helpers.Contact">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image
+                Source="/Resources/drawable/c_sharp_guitar.jpg"/>
+            <Label
+                Text="Welcome to contacts"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+            <Button
+                Text="Go back"
+                Clicked="NavigateBack"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

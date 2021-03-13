@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ActorList.MainPage">
+
+    <StackLayout>
+        <ListView x:Name="actorListView"
+                  VerticalOptions="FillAndExpand"
+                  ItemSelected="SelectActor"
+                  IsPullToRefreshEnabled="True"> <!-- toont wacht icoon-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <!--<Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Grid.Column="0" Source="{Binding PhotoURL}"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding Age}"/>
+                            <Image Grid.Row="0" Grid.Column="3" Source="{Binding PhotoURL}"/>
+                        </Grid>-->
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Name}" BackgroundColor="Red"/>
+                            <Image Source="{Binding photoURL}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

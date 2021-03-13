@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OefTableView.StylePractisePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="colorButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Green"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="BorderWidth" Value="5"/>
+                <Setter Property="BorderColor" Value="Purple"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Style="{StaticResource mainButtonStyle}"
+                    Text="To Settings page"
+                    Clicked="GoToSettingsPage"/>
+            <!-- kan stijlen nog steeds overswhrijven-->
+            <Button Style="{StaticResource colorButtonStyle}"
+                    Text="About"
+                    BackgroundColor="Pink"/>
+            <Button BackgroundColor="Yellow"
+                    TextColor="Red"
+                    BorderColor="Pink"
+                    BorderWidth="5"
+                    VerticalOptions="CenterAndExpand"
+                    Text="List Button"/>
+            <Label FontSize="50"
+                   Text="The text in the label"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

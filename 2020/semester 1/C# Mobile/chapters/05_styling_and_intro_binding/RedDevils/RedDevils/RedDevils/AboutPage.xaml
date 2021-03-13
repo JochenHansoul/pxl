@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RedDevils.AboutPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Resources>
+                <Style TargetType="Label">
+                    
+                </Style>
+            </StackLayout.Resources>
+            <Label Text="Eigenaar: Jochen Hansoul"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Dit is een app voor uitleg te geven over de rode duivels."
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+
+            <Label
+                Text="Hello"
+                Rotation="{Binding Source={x:Reference rotationSlider}, Path=Value}"
+                FontSize="{Binding Source={x:Reference rotationSlider}, Path=Value}"/>
+
+            <Slider
+            x:Name="rotationSlider"
+            Minimum="0"
+            Maximum="360"
+            Value="0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

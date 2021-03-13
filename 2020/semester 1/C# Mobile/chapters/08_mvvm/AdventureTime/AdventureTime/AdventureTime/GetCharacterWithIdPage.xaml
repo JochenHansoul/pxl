@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Behaviors="clr-namespace:AdventureTime.Behaviors"
+             x:Class="AdventureTime.GetCharacterWithIdPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                Text="Name:"/>
+                <Label
+                x:Name="fullNameLabel"
+                Text="Enter an id and click on the button"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Button
+                    Text="Get Fullname"
+                    Clicked="GetCharacterWithId"/>
+                <Entry
+                    x:Name="idEntry">
+                    <Entry.Behaviors>
+                        <Behaviors:RatingBehavior/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label
+                    x:Name="amountOfCharacters"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

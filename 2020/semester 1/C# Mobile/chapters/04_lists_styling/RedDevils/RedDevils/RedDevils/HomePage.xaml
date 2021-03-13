@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RedDevils.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image
+                HeightRequest="150"
+                Source="https://liquipedia.net/commons/images/2/20/ReD_DevilS_e-Sports_2018.png"/><!--verticaloptions="fillandexpand" gaat alles innemen-->
+            <Button
+                Text="Team"
+                Clicked="NavigateToTeamPage"
+                Style="{StaticResource redDevilsButton}"/>
+            <Button
+                Text="Settings"
+                Clicked="NavigateToSettingsPage"
+                Style="{StaticResource redDevilsButton}"/>
+            <Button
+                Text="About"
+                Clicked="NavigateToAboutPage"
+                Style="{StaticResource redDevilsButton}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

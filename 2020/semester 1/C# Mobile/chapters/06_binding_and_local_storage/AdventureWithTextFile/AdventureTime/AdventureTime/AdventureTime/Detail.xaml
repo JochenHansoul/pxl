@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AdventureTime.Detail">
+    <ContentPage.Content>
+        <StackLayout><!--x:DataType="modelnamespace:Character" iets voor controle of juiste property hebt-->
+            <Label
+                Text="{Binding FirstName}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding LastName}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Image
+                Source="{Binding ImageURL}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button
+                Text="Debug Button"
+                Clicked="DoSomeDebugging"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

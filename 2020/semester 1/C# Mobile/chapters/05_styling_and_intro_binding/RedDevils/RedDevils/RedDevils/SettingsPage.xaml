@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RedDevils.SettingsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="settingsLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="HotPink"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- hij maakt hier een Tableview met een Tableroot met daarin Tablesections-->
+            <!--Tableview Intent="settings"-->
+            <!--in TableSections (met Titel="...") zitten Switchcell's met Text="..."-->
+            <!-- Tableview HasunevenRows="True" voor rijen ver verschillende hoogten te geven-->
+            <Label
+                Text="App Settings"
+                Style="{StaticResource settingsLabel}" />
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="Send mail when new labels are in"
+                    HorizontalOptions="CenterAndExpand"/>
+                <Switch/>
+            </StackLayout>
+            <Entry
+                Text="An entry cell let the user do something"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Text="Font size in the orientation"
+                    HorizontalOptions="CenterAndExpand"/>
+                <Slider
+                    Grid.Column="1"
+                    WidthRequest="100"/>
+            </Grid>
+            <!--<StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="Font size in the orientation"
+                    HorizontalOptions="CenterAndExpand"/>
+                <Slider
+                    Scale="1"
+                    Minimum="0" Maximum="100"/>
+            </StackLayout>-->
+            <Label
+                Text="Other Settings"
+                Style="{StaticResource settingsLabel}" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Text="You can also use a grid"
+                    Grid.Row="0" Grid.Column="0"/>
+                <Label
+                    Text="For example with two colums and with rows that are"
+                    Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+            <Label
+                Text="And center things"
+                Grid.Row="1" Grid.Column="0"
+                HorizontalTextAlignment="Center"/>
+            <StackLayout
+                Orientation="Horizontal"
+                BackgroundColor="Blue">
+                <Label
+                    Text="And another switch"
+                    HorizontalOptions="CenterAndExpand"/>
+                <Switch/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ActorList.ActorDetail">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="actorLabel"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Image x:Name="actorImage"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

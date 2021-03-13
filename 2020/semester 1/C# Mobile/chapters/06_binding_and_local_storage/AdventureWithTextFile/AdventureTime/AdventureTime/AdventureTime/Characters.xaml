@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AdventureTime.Characters">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Text="Characters"
+                FontSize="20"
+                BackgroundColor="Pink"
+                TextColor="PaleVioletRed"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="150"
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"/>
+            <Label
+                x:Name="amountOfCharactersLabel"
+                FontSize="20"
+                BackgroundColor="Yellow"
+                TextColor="PaleVioletRed"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="150"
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"/>
+            <ListView
+                x:Name="charactersListView"
+                VerticalOptions="FillAndExpand"
+                ItemTapped="TabCharacter">
+                <ListView.ItemTemplate
+                    x:DateType="modelnamespace:Character"><!--Ter controle. Als iets verkeerd speld-->
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Image
+                                    Source="{Binding ImageURL, TargetNullValue='trash.png'}"
+                                    Grid.Column="0" Grid.Row="0"/>
+                                <Label
+                                    Text="{Binding FullName, Converter={StaticResource firstNameConverter}}"
+                                    Grid.Column="1" Grid.Row="0"
+                                    BackgroundColor="{Binding LastName, Converter={StaticResource lastNameToColorConverter}}"/>
+                                <Button
+                                    Text="Set as favorite"
+                                    Clicked="SetFavoriteCharacter"
+                                    CommandParameter="{Binding Id}"
+                                    Grid.Column="2" Grid.Row="0"
+                                    BackgroundColor="{Binding IsFavorite, Converter={StaticResource favoriteCharacterConverter}}"/>
+                                <ImageButton
+                                    Source="trash.png"
+                                    Grid.Column="3" Grid.Row="0"
+                                    Clicked="RemoveCharacter"
+                                    CommandParameter="{Binding .}"/><!--in praktijk: Binding Id. Wij hier "." dit geeft heel het object mee-->
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+                Text="Add a new Character"
+                Clicked="AddCharacter"
+                BackgroundColor="Orange"
+                Font="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

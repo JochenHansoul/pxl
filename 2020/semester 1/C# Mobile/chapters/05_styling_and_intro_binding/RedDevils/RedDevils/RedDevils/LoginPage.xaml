@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RedDevils.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Label
+                Grid.Row="0" Grid.Column="0"
+                Text="Enter username"
+                FontSize="15"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+            <Label
+                Grid.Row="1" Grid.Column="0"
+                Text="Enter password"
+                FontSize="15"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+            <Entry
+                x:Name="usernameEntry"
+                Grid.Row="0" Grid.Column="1"/>
+            <Entry
+                x:Name="passportEntry"
+                Grid.Row="1" Grid.Column="1"
+                IsPassword="True"/>
+            <Button
+                Grid.Row="2" Grid.Column="1"
+                Text="Go to Home"
+                Style="{StaticResource redDevilsButton}"
+                Clicked="NavigateToHomePage"/><!--Grid.Columnspan="3"/> om drie colommen te overspannen-->
+            <Label
+                x:Name="errorLabel"
+                Grid.Row="2" Grid.Column="0"
+                FontSize="15"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

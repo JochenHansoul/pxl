@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertyesAndButton.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Text="Dit is belangrijk"
+                HorizontalTextAlignment="End"
+                BackgroundColor="Yellow"/>
+            <Label
+                x:Name="errorLabel"
+                Text="Hier heb ik een foutje gemaakt&#10;Dit was belangrijk"
+                TextDecorations="Strikethrough"/>
+            <Label
+                Text="Deze is groen, de text is wit!"
+                BackgroundColor="Green"
+                TextColor="White"/>
+            <Label>
+                <Label.Text>KLICK OM DE KLEUR TE VERANDEREN</Label.Text>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ChangeColorErrorLabel"/>
+                </Label.GestureRecognizers>
+                <Label.Padding>
+                    <Thickness>15</Thickness>
+                </Label.Padding>
+                <Label.Margin>
+                    <Size>5, 10</Size>
+                </Label.Margin>
+                <Label.BackgroundColor>
+                    <Color>Gray</Color>
+                </Label.BackgroundColor>
+            </Label>
+            <DatePicker HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

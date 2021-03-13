@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DynamicStyles.MainPage">
+
+    <StackLayout>
+        <Switch
+            PropertyChanged="Switch_PropertyChanged"/>
+        <Button
+            Text="this is a button"
+            Style="{DynamicResource dynamicStyle1}"/>
+        <Button
+            Text="I'm an other button"
+            Style="{StaticResource styleB}"/>
+        <Button
+            Text="Nog een button"/>
+    </StackLayout>
+
+</ContentPage>
