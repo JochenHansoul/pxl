@@ -1,4 +1,4 @@
-package be.pxl.h1.eigenOefeningen;
+package be.pxl.h1.eigenOefeningen.strings;
 
 public class ParsingStrings {
     public static void main(String[] args) {

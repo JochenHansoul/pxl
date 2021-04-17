@@ -1,4 +1,4 @@
-package be.pxl.h1.eigenOefeningen;
+package be.pxl.h1.eigenOefeningen.input;
 
 import java.util.Scanner;
 
