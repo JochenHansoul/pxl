@@ -1,6 +1,6 @@
 package be.pxl.h1.voorbeelden;
 
-public class Opdracht4_ind_and_double {
+public class Opdracht4_int_and_double {
     public static void main(String[] args) {
         int i;
         double d;
