@@ -8,17 +8,20 @@ import java.util.Scanner;
 public class Oefening2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Random random = new Random();
-        System.out.println("Geef het aantal getallen, de minimumwaarde en de maximumwaarde in");
+
+        // input aantal getallen, minimumwaarde en maximumwaarde
+        String inputMessage = "Geef het aantal getallen, de minimumwaarde en de maximumwaarde in";
+        System.out.println(inputMessage);
         String[] values = input.nextLine().split(" ");
         while (values.length != 3) {
-            System.out.println("Geef het aantal getallen, de minimumwaarde en de maximumwaarde in");
+            System.out.println(inputMessage);
             values = input.nextLine().split(" ");
         }
         int amount = Integer.parseInt(values[0]);
         int min = Integer.parseInt(values[1]);
         int max = Integer.parseInt(values[2]);
 
+        // controle minimumwaarde en maximumwaarde
         System.out.println("aantal getallen " + amount);
         if (min > max) {
             int temp = min;
@@ -28,6 +31,19 @@ public class Oefening2 {
             System.out.println("grootste getal (na wisseling) " + max);
         }
 
+        ArrayList<Integer> numbers = generateRandomNumberList(amount, min, max, new Random());
+        OptionalDouble optionalDouble = numbers.stream()
+            .mapToDouble(i -> i)
+            .average();
+        if (optionalDouble.isPresent()) {
+            System.out.println("het gemiddelde is: " + optionalDouble.getAsDouble());
+        } else {
+            System.out.println("het gemiddelde is unknown");
+        }
+        input.close();
+    }
+
+    public static ArrayList<Integer> generateRandomNumberList(int amount, int min, int max, Random random) {
         ArrayList<Integer> numbers = new ArrayList<>();
         int difference = max - min;
         for (int i = 0; i < amount; i++) {
@@ -35,12 +51,6 @@ public class Oefening2 {
             numbers.add(n);
             System.out.println(n);
         }
-        OptionalDouble optionalDouble = numbers.stream().mapToDouble(i -> i).average();
-        if (optionalDouble.isPresent()) {
-            System.out.println("het gemiddelde is: " + optionalDouble.getAsDouble());
-        } else {
-            System.out.println("het gemiddelde is unknown");
-        }
-        input.close();
+        return numbers;
     }
 }
