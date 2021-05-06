@@ -1,6 +1,8 @@
-package be.pxl.h8.oefeningen.oef02;
+package be.pxl.h8.oefeningen.oef02_optionaldouble;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.OptionalDouble;
 import java.util.Random;
 import java.util.Scanner;
@@ -22,7 +24,6 @@ public class Oefening2 {
         int max = Integer.parseInt(values[2]);
 
         // controle minimumwaarde en maximumwaarde
-        System.out.println("aantal getallen " + amount);
         if (min > max) {
             int temp = min;
             min = max;
@@ -31,15 +32,17 @@ public class Oefening2 {
             System.out.println("grootste getal (na wisseling) " + max);
         }
 
-        ArrayList<Integer> numbers = generateRandomNumberList(amount, min, max, new Random());
-        OptionalDouble optionalDouble = numbers.stream()
+        // generating list of random numbers and optional average
+        List<Integer> numbers = generateRandomNumberList(amount, min, max, new Random());
+        OptionalDouble optionalAverage = numbers.stream()
             .mapToDouble(i -> i)
             .average();
-        if (optionalDouble.isPresent()) {
-            System.out.println("het gemiddelde is: " + optionalDouble.getAsDouble());
-        } else {
-            System.out.println("het gemiddelde is unknown");
-        }
+
+        // printing the list of numbers and average
+        System.out.println(Arrays.toString(numbers.toArray()));
+        System.out.printf("het gemiddelde is: %s%n",
+            (optionalAverage.isPresent()) ? optionalAverage.getAsDouble() + "" : "unknown");
+
         input.close();
     }
 
@@ -47,9 +50,7 @@ public class Oefening2 {
         ArrayList<Integer> numbers = new ArrayList<>();
         int difference = max - min;
         for (int i = 0; i < amount; i++) {
-            int n = random.nextInt(difference) + min;
-            numbers.add(n);
-            System.out.println(n);
+            numbers.add(random.nextInt(difference) + min);
         }
         return numbers;
     }
