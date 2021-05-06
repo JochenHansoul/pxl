@@ -1,4 +1,4 @@
-package be.pxl.h8.oefeningen.oef3_huwelijk;
+package be.pxl.h8.oefeningen.oef03_huwelijk;
 
 public class Township {
     public static final char[] charAfterThisNeedsToBeUpper = new char[]{' ', '*', '\'', '-'};
