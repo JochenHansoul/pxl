@@ -21,8 +21,11 @@ class TextNode
 
     public function addNode($text): void
     {
-        $this->nextNode === null ? $this->nextNode = $this::makeNode($text)
-            : $this->nextNode->addNode($text);
+        if ($this->nextNode === null) {
+            $this->nextNode = $this::makeNode($text);
+        } else {
+            $this->nextNode->addNode($text);
+        }
     }
 
     public function printAll(): void
