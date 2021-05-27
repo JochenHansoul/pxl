@@ -35,7 +35,7 @@ class TextNode
 
     public function printTextNodeAt(int $i): void
     {
-        if ($i === 0) {
+        /*if ($i === 0) {
             echo $this->text;
         } else if ($i > 0) {
             if ($this->nextNode !== null) {
@@ -45,15 +45,19 @@ class TextNode
             }
         } else {
             throw new \Exception("input value may not be less than zero");
-        }
+        }*/
 
         // Het is logischer om te correcte waarde te nemen en dan het juiste te returned
         // dan telkens een foute waarde te nemen en een fout op de werpen.
         // iemand die de code leest ziet zo wat de code hoort te doen en de fouten
         // worden naar beneden geduwd.
         // if (response.status() == 201) { return response.json(); } else ...
+        
+        // remark 2:
+        // Ergens lijkt het nog steeds logischer maar ik ben nu toch van mening
+        // dat if else toch beter is.
 
-        /*if ($i < 0) {
+        if ($i < 0) {
             throw new \Exception("input value may not be less than zero");
         } elseif ($i === 0) {
             echo $this->text;
@@ -61,6 +65,6 @@ class TextNode
             throw new \Exception("Input value is to height");
         } else {
             $this->nextNode->printTextNodeAt(--$i);
-        }*/
+        }
     }
 }
