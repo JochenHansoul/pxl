@@ -1,7 +1,7 @@
 "use strict";
 
 console.log("this:");
-console.log(this);
+console.log(this); // {}
 
 let protoObject = {
     method() {
@@ -9,5 +9,6 @@ let protoObject = {
     }
 }
 let o = Object.create(protoObject);
+o.name = "name";
 console.log("this in object:");
-console.log(o.method());
+console.log(o.method()); // returns the propertys of the own object. {} if empty
