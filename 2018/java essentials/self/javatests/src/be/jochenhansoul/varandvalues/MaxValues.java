@@ -1,4 +1,4 @@
-package be.jochenhansoulvarandbalues;
+package be.jochenhansoul.varandvalues;
 
 public class MaxValues {
     public static void main(String[] args) {
