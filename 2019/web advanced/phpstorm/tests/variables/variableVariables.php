@@ -11,7 +11,12 @@ echo "var1 and \$var1: $var1 ${$var1}\n";
 echo "hello: $hello\n";
 
 
-
+// true reason why it should not be done
+$alreadyDefined = "variable is defined";
+$var2 = "alreadyDefined";
+$$var2 = "this variable is already defined";
+echo $alreadyDefined . "\n"; // now this veriable is overrided
+// how do we know if we have created a new variable or overrided an excisting variable
 
 
 
