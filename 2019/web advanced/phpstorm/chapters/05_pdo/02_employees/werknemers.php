@@ -1,29 +1,33 @@
 <?php
 
-const SERVER = 'localhost'; // ik moet hier waarschijnlijk mijn poortnummer nog achter zetten
+require_once "./src/UserPDO.php";
+
+// dsn
+const SERVER = 'localhost';
 const DATABASE = 'oefpdo';
+const CHARSET = "utf8mb4";
+const DSN = "mysql:host=" . SERVER . ";dbname=" . DATABASE . ";charset=" . CHARSET;
+
+// pdo
 const USER = 'student';
 const PASSWORD = 'pxl';
+const OPTIONS = [
+	PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+	PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+];
 
-$rows = null;
-
-$pdo = null;
+// retrieving data
+$rows = [];
 try {
-    $pdo = new PDO("mysql:host=" . SERVER . ";dbname=" . DATABASE, USER, PASSWORD);
-    $pdo->setAttribute(
-        PDO::ATTR_ERRMODE,
-        PDO::ERRMODE_EXCEPTION
-    );
-    $statement = $pdo->query('SELECT * FROM user');
-    $statement->setFetchMode(PDO::FETCH_ASSOC);
-    $rows = $statement->fetchAll();
+    $userPdo = new UserPDO(DSN, USER, PASSWORD, OPTIONS);
+    $rows = $userPdo->getUsers();
 } catch (PDOException $e) {
     echo "PDOEexception: " . $e->getMessage();
 }
-$pdo = null;
 
+// printing data
 echo "<p>";
-while ($row = $rows) {
+foreach ($rows as $row) {
     echo $row["user_id"] . " " . $row["name"] . "<br/>";
 }
 echo "</p>";
