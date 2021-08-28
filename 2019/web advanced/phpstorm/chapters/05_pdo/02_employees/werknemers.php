@@ -26,8 +26,8 @@ try {
 }
 
 // printing data
-echo "<p>";
+echo "<p>\n";
 foreach ($rows as $row) {
-    echo $row["user_id"] . " " . $row["name"] . "<br/>";
+    echo $row["user_id"] . " " . $row["name"] . "<br/>\n";
 }
-echo "</p>";
+echo "</p>\n";
