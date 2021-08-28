@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace controller;
 
 use pdo\StaffPDO;
@@ -20,16 +22,9 @@ class StaffController
 	    \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
     ];
 
-    public function __construct()
-    {
-    }
-
-    public function index()
+    public function index(): array
     {
         // retrieving data
-        //echo "\n";
-        //echo var_export(OPTIONS);
-        //echo "\n";
         $rows = [];
         try {
             $staffPdo = new StaffPDO(self::DSN, self::USER, self::PASSWORD, self::OPTIONS);
