@@ -1,9 +1,14 @@
+# zelf
 
+## java
 *.iml
 /.idea/
 /.gradle/
 /target/
 /out/
+
+## php
+vendor/
 
 ##Dominic Mitchell
 ##link: https://stackoverflow.com/questions/991801/git-ignores-and-maven-targets
