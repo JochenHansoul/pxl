@@ -1,6 +1,6 @@
 <?php
 
-require_once "./src/UserPDO.php";
+require_once "./src/StaffPDO.php";
 
 // dsn
 const SERVER = 'localhost';
@@ -19,8 +19,8 @@ const OPTIONS = [
 // retrieving data
 $rows = [];
 try {
-    $userPdo = new UserPDO(DSN, USER, PASSWORD, OPTIONS);
-    $rows = $userPdo->getUsers();
+    $staffPdo = new StaffPDO(DSN, USER, PASSWORD, OPTIONS);
+    $rows = $staffPdo->getStaff();
 } catch (PDOException $e) {
     echo "PDOEexception: " . $e->getMessage();
 }

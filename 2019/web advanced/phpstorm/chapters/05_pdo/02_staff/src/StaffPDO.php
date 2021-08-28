@@ -1,6 +1,6 @@
 <?php
 
-class UserPDO
+class StaffPDO
 {
     private $pdo;
 
@@ -9,9 +9,9 @@ class UserPDO
         $this->pdo = new PDO($dsn, $user, $passwd, $options);
     }
 
-    public function getUsers()
+    public function getStaff()
     {
-        $statement = $this->pdo->query('SELECT * FROM user');
+        $statement = $this->pdo->query("SELECT * FROM staff");
         $statement->setFetchMode(PDO::FETCH_ASSOC);
         return $statement->fetchAll();
     }
