@@ -1,0 +1,8 @@
+{
+  "autoload": {
+    "psr-4": {	
+      "pdo\\": "src/pdo",
+      "controller\\": "src/controller"
+    }
+  }
+}
