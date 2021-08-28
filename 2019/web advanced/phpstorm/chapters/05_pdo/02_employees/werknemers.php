@@ -5,20 +5,25 @@ const DATABASE = 'oefpdo';
 const USER = 'student';
 const PASSWORD = 'pxl';
 
+$rows = null;
+
 $pdo = null;
 try {
     $pdo = new PDO("mysql:host=" . SERVER . ";dbname=" . DATABASE, USER, PASSWORD);
-    echo "you have connected\n";
     $pdo->setAttribute(
         PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION
     );
-    $statement = $pdo->query('SELECT * FROM werknemers');
+    $statement = $pdo->query('SELECT * FROM user');
     $statement->setFetchMode(PDO::FETCH_ASSOC);
-    while ($row = $statement->fetch()) {
-        print_r($row);
-    }
+    $rows = $statement->fetchAll();
 } catch (PDOException $e) {
-    echo "ERROR: " . $e->getMessage();
+    echo "PDOEexception: " . $e->getMessage();
 }
 $pdo = null;
+
+echo "<p>";
+while ($row = $rows) {
+    echo $row["user_id"] . " " . $row["name"] . "<br/>";
+}
+echo "</p>";
