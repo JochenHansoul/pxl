@@ -6,7 +6,7 @@ namespace pdo;
 
 class StaffPDO
 {
-    private object $pdo;
+    private \PDO $pdo;
 
     public function __construct(string $dsn, string $user, string $passwd, array $options)
     {
