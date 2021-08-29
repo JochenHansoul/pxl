@@ -7,11 +7,11 @@ use controller\StaffController;
 require_once "vendor/autoload.php";
 
 $staffController = new StaffController();
-$rows = $staffController->index();
+$staffMembers = $staffController->index();
 
 // printing data
 echo "<p>\n";
-foreach ($rows as $row) {
-    echo $row["user_id"] . " " . $row["name"] . "<br/>\n";
+foreach ($staffMembers as $staff) {
+    echo $staff->getName() . "<br/>\n";
 }
 echo "</p>\n";

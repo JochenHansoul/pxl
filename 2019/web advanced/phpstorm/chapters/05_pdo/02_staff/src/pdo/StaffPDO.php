@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace pdo;
 
+use data\Staff;
+
 class StaffPDO
 {
     private \PDO $pdo;
@@ -17,8 +19,10 @@ class StaffPDO
     {
         $statement = $this->pdo->query("SELECT * FROM staff");
         $statement->setFetchMode(\PDO::FETCH_ASSOC);
-        return $statement->fetchAll();
+        $staffMembers = [];
+        foreach($statement->fetchAll() as $row) {
+            $staffMembers[] = new Staff((int) $row["user_id"], $row["name"]);
+        }
+        return $staffMembers;
     }
 }
-
-
