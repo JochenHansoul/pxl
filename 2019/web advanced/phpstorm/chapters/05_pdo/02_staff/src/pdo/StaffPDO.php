@@ -21,7 +21,7 @@ class StaffPDO
         $statement->setFetchMode(\PDO::FETCH_ASSOC);
         $staffMembers = [];
         foreach($statement->fetchAll() as $row) {
-            $staffMembers[] = new Staff((int) $row["user_id"], $row["name"]);
+            $staffMembers[] = new Staff(intval($row["user_id"]), $row["name"]);
         }
         return $staffMembers;
     }
