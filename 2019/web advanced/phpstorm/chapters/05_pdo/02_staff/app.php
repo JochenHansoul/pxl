@@ -19,9 +19,9 @@ $staffMembers = $staffController->index();
 </head>
 <body>
     <ol>
-    <?php foreach ($staffMembers as $staff) { ?>
-    <li><?php echo $staff->getName(); ?></li>
-    <?php } ?>
+    <?php foreach ($staffMembers as $staff): ?>
+        <li><?php echo $staff->getName(); ?></li>
+    <?php endforeach ?>
     </ol>
 </body>
 </html>
