@@ -1,3 +1,3 @@
-import { calculateCircumference } from './data-module';
+import { circumference } from './modules/circumference';
 
-console.log(calculateCircumference(2))
+console.log(circumference(2))
