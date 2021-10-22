@@ -14,3 +14,11 @@ let object = {
 console.log(object.param1);
 object.fun1();
 object.fun2();
+
+console.log("function definition:");
+console.log(object.fun1);
+console.log(object.fun2);
+
+console.log("function oproepen:");
+let fun = object.fun1;
+fun();
