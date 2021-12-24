@@ -4,15 +4,14 @@
 # of numbers starting from one untill that number
 # is reached
 
-vLow=3
-read -p "Geef een getal groter dan $vLow in: " vHigh
-while [ $vLow -gt $vHigh ]
+LOW=3
+read -p "Geef een getal groter dan $LOW in: " HIGH
+while [ $LOW -ge $HIGH ]
 do
-    read -p "Geef een getal groter dan $vLow in: " vHigh
-    echo $vHigh
+    read -p "Geef een getal groter dan $LOW in: " HIGH
 done
 
-for vCounter in $(seq $vLow $vHigh)
+for N in $(seq $LOW $HIGH)
 do
-	echo $vCounter
+	echo $N
 done
