@@ -1,0 +1,9 @@
+#!/bin/bash --
+
+DAY="monday"
+if [ $DAY = "monday" ]; then
+    echo "today is monday"
+else
+    echo "today is not monday"
+fi
+

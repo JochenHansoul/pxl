@@ -1,0 +1,18 @@
+#!/bin/bash --
+
+# enter a number larger then one and print a column
+# of numbers starting from one untill that number
+# is reached
+
+vLow=3
+read -p "Geef een getal groter dan $vLow in: " vHigh
+while [ $vLow -gt $vHigh ]
+do
+    read -p "Geef een getal groter dan $vLow in: " vHigh
+    echo $vHigh
+done
+
+for vCounter in $(seq $vLow $vHigh)
+do
+	echo $vCounter
+done

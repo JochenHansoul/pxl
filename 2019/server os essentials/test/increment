@@ -1,0 +1,7 @@
+#!/bin/bash --
+vI=0
+echo "The value before is $vI"
+((vI++))
+echo "The value after is $vI"
+vI2=((vI+1))
+echo "New value is " $vI2
