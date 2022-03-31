@@ -1,6 +1,6 @@
 "use strict";
 // Jochen Hansoul
-export default class Product{
+export default class Product {
     constructor(id, weight) {
         if (!Number.isInteger(id)) {
             throw new Error("id is not an integer");

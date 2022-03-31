@@ -1,6 +1,6 @@
 "use strict";
 // naam: Jochen Hansoul
-import Product from './Product';
+import Product from './Product.js';
 export default class Container{
     constructor(maxWeight) {
         if (typeof maxWeight != "number") {
@@ -14,8 +14,8 @@ export default class Container{
     }
 
     addProduct(product) {
-        // forgot to add the !
-        if (product instanceof Product) {
+        // forgot to add the ! (fixed this)
+        if (!product instanceof Product) {
             throw new Error("product must be an instance of Product")
         }
         let id = product.id;
