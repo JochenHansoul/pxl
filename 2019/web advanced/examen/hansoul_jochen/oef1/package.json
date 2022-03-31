@@ -2,7 +2,8 @@
   "name": "webpack_babel_jest_skeleton",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "type": "module",
+  "main": "src/js/app.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "test": "jest",
