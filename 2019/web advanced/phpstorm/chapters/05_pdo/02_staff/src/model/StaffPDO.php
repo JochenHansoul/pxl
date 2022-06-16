@@ -2,17 +2,19 @@
 
 declare(strict_types=1);
 
-namespace pdo;
+namespace model;
 
-use data\Staff;
+use function utils\getStudentPDO;
+
+require_once __DIR__ . "/../../vendor/autoload.php";
 
 class StaffPDO
 {
     private \PDO $pdo;
 
-    public function __construct(string $dsn, string $user, string $passwd, array $options)
+    public function __construct()
     {
-        $this->pdo = new \PDO($dsn, $user, $passwd, $options);
+        $this->pdo = getStudentPDO();
     }
 
     public function getStaff(): array

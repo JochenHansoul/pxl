@@ -1,9 +1,11 @@
 {
   "autoload": {
     "psr-4": {	
-      "pdo\\": "src/pdo",
-      "controller\\": "src/controller",
-      "data\\": "src/data"
-    }
+      "model\\": "src/model",
+      "controller\\": "src/controller"
+    },
+    "files": [
+      "src/utils/getStudentPDO.php"
+    ]
   }
 }
