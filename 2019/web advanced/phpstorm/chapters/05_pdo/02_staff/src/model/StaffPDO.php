@@ -10,6 +10,14 @@ require_once __DIR__ . "/../../vendor/autoload.php";
 
 class StaffPDO
 {
+    // table
+    const STAFF_TABLE = "staff";
+
+    // rows
+    const STAFF_ID = "user_id";
+    const STAFF_NAME = "name";
+
+    // PDO
     private \PDO $pdo;
 
     public function __construct()
@@ -19,11 +27,11 @@ class StaffPDO
 
     public function getStaff(): array
     {
-        $statement = $this->pdo->query("SELECT * FROM staff");
+        $statement = $this->pdo->query("SELECT * FROM " . self::STAFF_TABLE);
         $statement->setFetchMode(\PDO::FETCH_ASSOC);
         $staffMembers = [];
         foreach($statement->fetchAll() as $row) {
-            $staffMembers[] = new Staff(intval($row["user_id"]), $row["name"]);
+            $staffMembers[] = new Staff(intval($row[self::STAFF_ID]), $row[self::STAFF_NAME]);
         }
         return $staffMembers;
     }
