@@ -6,19 +6,18 @@ namespace model;
 
 use function utils\getStudentPDO;
 
-require_once __DIR__ . "/../../vendor/autoload.php";
 
 class StaffPDO
 {
     // table
-    const STAFF_TABLE = "staff";
+    private const STAFF_TABLE = "staff";
 
     // rows
-    const STAFF_ID = "user_id";
-    const STAFF_NAME = "name";
+    private const STAFF_ID = "user_id";
+    private const STAFF_NAME = "name";
 
     // PDO
-    private \PDO $pdo;
+    private readonly \PDO $pdo;
 
     public function __construct()
     {
