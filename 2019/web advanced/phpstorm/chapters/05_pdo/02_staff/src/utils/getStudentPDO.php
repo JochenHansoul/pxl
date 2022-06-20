@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace utils;
 
-function getStudentPDO(): \PDO
-{
-    // dsn
+function getStudentPDO (): \PDO {
     $dns = "mysql:host=localhost;dbname=oefpdo;charset=utf8mb4";
-
-    // pdo
     $user = "student";
     $password = "pxl";
     $options = [
