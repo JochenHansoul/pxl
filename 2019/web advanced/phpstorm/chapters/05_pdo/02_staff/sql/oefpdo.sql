@@ -1,18 +1,12 @@
-DROP DATABASE IF EXISTS oefpdo;
+-- deleting data
+DROP DATABASE IF EXISTS oef_pdo;
 
-CREATE DATABASE oefpdo;
+DROP USER IF EXISTS 'oef_pdo_user'@'localhost';
 
-GRANT ALL PRIVILEGES ON oefpdo.* TO student@localhost;
+-- creating database
+CREATE DATABASE oef_pdo;
 
-USE oefpdo;
-
-CREATE TABLE staff (
-    PRIMARY KEY (user_id),
-    user_id int(5)      AUTO_INCREMENT,
-    name    varchar(30) NOT NULL
-);
-
-INSERT INTO staff (user_id, name)
-VALUES  (1, 'Martin'),
-        (2, 'Feynman'),
-        (3, 'Graves');
+-- creating user
+CREATE USER 'oef_pdo_user'@'localhost' IDENTIFIED BY 'password';
+GRANT SELECT, INSERT, UPDATE ON oef_pdo.* TO 'oef_pdo_user'@'localhost';
+FLUSH PRIVILEGES;
