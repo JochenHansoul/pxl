@@ -13,8 +13,9 @@ class StaffPDO
     private const STAFF_TABLE = "staff";
 
     // rows
-    private const STAFF_ID = "user_id";
-    private const STAFF_NAME = "name";
+    private const STAFF_ID = "id_staff";
+    private const STAFF_NAME_FIRST = "name_first";
+    private const STAFF_NAME_LAST = "name_last";
 
     // PDO
     private readonly \PDO $pdo;
@@ -30,7 +31,11 @@ class StaffPDO
         $statement->setFetchMode(\PDO::FETCH_ASSOC);
         $staffMembers = [];
         foreach($statement->fetchAll() as $row) {
-            $staffMembers[] = new Staff(intval($row[self::STAFF_ID]), $row[self::STAFF_NAME]);
+            $staffMembers[] = new Staff(
+                intval($row[self::STAFF_ID]),
+                $row[self::STAFF_NAME_FIRST],
+                $row[self::STAFF_NAME_LAST]
+            );
         }
         return $staffMembers;
     }

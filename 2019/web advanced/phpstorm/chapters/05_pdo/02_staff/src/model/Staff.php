@@ -6,32 +6,27 @@ namespace model;
 
 class Staff
 {
-    private int $id;
-    private string $name;
+    private readonly int $id;
+    private readonly string $nameFirst;
+    private readonly string $nameLast;
 
-    public function __construct(int $id, string $name)
+    public function __construct(int $id, string $nameFirst, string $nameLast)
     {
         $this->id = $id;
-        $this->name = $name;
+        $this->nameFirst = $nameFirst;
+        $this->nameLast = $nameLast;
     }
 
-    public function setName(String $name): void
+    public function getFullName(): string
     {
-        $this->name = $name;
-    }
-
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
+        return $this->nameFirst . " " . $this->nameLast;
     }
 
     public function __toString(): string
     {
-        return "staff{id=" . $this->id . ",name=" . $this->name . "}";
+        return "staff{ id = " . $this->id
+            . ", nameFirst = " . $this->nameFirst
+            . ", nameLast = " . $this->nameLast
+            . "}";
     }
 }

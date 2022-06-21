@@ -19,7 +19,7 @@ $staffMembers = $staffController->index();
   <h1>staff members</h1>
   <ul>
 <?php foreach ($staffMembers as $staff): ?>
-    <li><?php echo $staff->getName(); ?></li>
+    <li><?php echo $staff->getFullName(); ?></li>
 <?php endforeach ?>
   </ul>
 </body>
