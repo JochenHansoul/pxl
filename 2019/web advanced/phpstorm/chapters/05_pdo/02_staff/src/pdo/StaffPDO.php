@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace model;
+namespace pdo;
+
+use data\Staff;
 
 use function utils\getStudentPDO;
 

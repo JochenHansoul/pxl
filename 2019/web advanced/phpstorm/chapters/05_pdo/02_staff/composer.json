@@ -1,8 +1,8 @@
 {
   "autoload": {
     "psr-4": {	
-      "model\\": "src/model",
-      "controller\\": "src/controller"
+      "data\\": "src/data",
+      "pdo\\": "src/pdo"
     },
     "files": [
       "src/utils/getStudentPDO.php"
