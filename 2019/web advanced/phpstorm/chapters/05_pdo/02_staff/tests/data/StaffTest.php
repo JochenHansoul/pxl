@@ -6,29 +6,47 @@ namespace data;
 
 use PHPUnit\Framework\TestCase;
 
-class StaffTest extends TestCase
+final class StaffTest extends TestCase
 {
-    public function testId()
+    public function testClassConstructor(): void
     {
         $staff = new Staff(1, "first1", "last1");
-        $this->assertTrue($staff->id== 1);
+
+        $this->assertSame(1, $staff->id);
+        $this->assertSame("first1", $staff->nameFirst);
+        $this->assertSame("last1", $staff->nameLast);
     }
 
-    public function testFirstName()
+    public function testFullName(): void
     {
         $staff = new Staff(1, "first1", "last1");
-        $this->assertTrue($staff->nameFirst == "first1");
+        $this->assertSame("first1 last1", $staff->getFullName());
     }
 
-    public function testLastName()
+    public function testIdError(): void
     {
+        $this->expectError();
+        $message = "Cannot modify readonly property data\Staff::$id";
+        $this->expectErrorMessageMatches($message);
         $staff = new Staff(1, "first1", "last1");
-        $this->assertTrue($staff->nameLast == "last1");
+        \trigger_error($staff->id = 2, \ERROR);
     }
 
-    public function testFullName()
+    public function testNameLastError(): void
     {
+        $this->expectError();
+        $message = "Cannot modify readonly property data\Staff::$nameLast";
+        $this->expectErrorMessageMatches($message);
         $staff = new Staff(1, "first1", "last1");
-        $this->assertTrue($staff->getFullName() == "first1 last1");
+        \trigger_error($staff->nameLast = "mutate", \ERROR);
+    }
+
+    public function testNameFirstError(): void
+    {
+        $this->expectError();
+        $message = "Cannot modify readonly property data\Staff::$nameFirst";
+        $this->expectErrorMessageMatches($message);
+        $staff = new Staff(1, "first1", "last1");
+        \trigger_error($staff->nameFirst = "mutate", \ERROR);
     }
 }
