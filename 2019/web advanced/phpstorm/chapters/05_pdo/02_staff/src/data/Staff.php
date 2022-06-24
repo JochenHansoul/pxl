@@ -6,9 +6,9 @@ namespace data;
 
 class Staff
 {
-    private readonly int $id;
-    private readonly string $nameFirst;
-    private readonly string $nameLast;
+    public readonly int $id;
+    public readonly string $nameFirst;
+    public readonly string $nameLast;
 
     public function __construct(int $id, string $nameFirst, string $nameLast)
     {
