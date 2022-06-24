@@ -17,16 +17,14 @@ require_once "vendor/autoload.php";
 <?php
   try {
       $staffPDO = new StaffPDO();
-      $staffMembers = $staffPDO->getStaff();
-?>
+      $staffMembers = $staffPDO->getStaff(); ?>
   <ul>
 <?php foreach ($staffMembers as $staff): ?>
     <li><?php echo $staff->getFullName(); ?></li>
-<?php endforeach;
-  } catch (\PDOException $e) {
-      echo $e->getMessage();
-  }
-?>
+<?php endforeach; ?>
   </ul>
+<?php } catch (\PDOException $e) { ?>
+  <p><?php echo $e->getMessage();?></p>
+<?php } ?>
 </body>
 </html>
