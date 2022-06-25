@@ -16,6 +16,7 @@ class StaffPDO
 
     // rows
     private const STAFF_ID = "id_staff";
+    private const STAFF_EMAIL = "email";
     private const STAFF_NAME_FIRST = "name_first";
     private const STAFF_NAME_LAST = "name_last";
 
@@ -35,6 +36,7 @@ class StaffPDO
         foreach($statement->fetchAll() as $row) {
             $staffMembers[] = new Staff(
                 intval($row[self::STAFF_ID]),
+                $row[self::STAFF_EMAIL],
                 $row[self::STAFF_NAME_FIRST],
                 $row[self::STAFF_NAME_LAST]
             );
