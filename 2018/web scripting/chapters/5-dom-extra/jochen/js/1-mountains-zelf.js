@@ -123,7 +123,31 @@ const createTablePart = (dataPart, namePart, subPart) => {
     return tablePart
 };
 
-// input of creataTable must either be an empty array (if no values are presented), an array (for a single row) or a nested array (for multiple rows)
+// input of creataTable must either be an empty array
+// (if no values are presented),
+// an array (for a single row) or a nested array (for multiple rows)
+/*
+    better idea:
+    function createTable ( {}, table = document.createElement("table")) { return table }
+    input object:
+    {
+        tableHead: []
+        tableBody: [],
+        tableFoot: []
+    }
+    All properties are array that contain the data that goes into each part.
+    When the property does not excist or is undefined that part is not created.
+    If only the tableBody excist then only a table with content is created and
+    even if only an empty array is geven then this table part is created. this
+    was an user can easily choose to add a table head, body or foot or not by
+    simply including the properties of the object.
+    The table object can be used if you allready have a table and simply want
+    to add things to id or if it's a bit table to immediately add rows and
+    columns to the front end. It can also just be used to simply create a
+    table body or other table part and add the data simply as the body. this
+    way one function can be used to create tables with multiple parts or a
+    single table part!
+*/
 const createTable = (body, head = [], foot = []) => {
     let table = document.createElement("table");
     // table body
