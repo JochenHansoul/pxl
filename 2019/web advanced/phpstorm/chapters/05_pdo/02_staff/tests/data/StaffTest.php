@@ -64,11 +64,14 @@ final class StaffTest extends TestCase
     {
         $staff = new Staff(1, "first1@mail.com", "first1", "last1");
         $same = new Staff(1, "first1@mail.com", "first1", "last1");
+        $otherObject = new \stdClass();
         $otherId = new Staff(2, "first1@mail.com", "first1", "last1");
         $otherEmail = new Staff(1, "first2@mail.com", "first1", "last1");
         $otherNameFirst = new Staff(1, "first1@mail.com", "first2", "last1");
         $otherNameLast = new Staff(1, "first1@mail.com", "first1", "last2");
+        $this->assertTrue($staff->equals($staff));
         $this->assertTrue($staff->equals($same));
+        $this->assertFalse($staff->equals($otherObject));
         $this->assertFalse($staff->equals($otherId));
         $this->assertFalse($staff->equals($otherEmail));
         $this->assertFalse($staff->equals($otherNameFirst));
