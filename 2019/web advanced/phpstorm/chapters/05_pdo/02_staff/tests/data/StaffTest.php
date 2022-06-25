@@ -74,4 +74,32 @@ final class StaffTest extends TestCase
         $this->assertFalse($staff->equals($otherNameFirst));
         $this->assertFalse($staff->equals($otherNameLast));
     }
+
+    public function testCopy(): void
+    {
+        $original = new Staff(1, "first1@mail.com", "first1", "last1");
+
+        $copy = $original->copy();
+        $this->assertTrue($original->equals($copy));
+
+        $copy = $original->copy(id: 2);
+        $this->assertTrue(
+            $copy->equals(new Staff(2, "first1@mail.com", "first1", "last1"))
+        );
+
+        $copy = $original->copy(email: "other");
+        $this->assertTrue(
+            $copy->equals(new Staff(1, "other", "first1", "last1"))
+        );
+
+        $copy = $original->copy(nameFirst: "other");
+        $this->assertTrue(
+            $copy->equals(new Staff(1, "first1@mail.com", "other", "last1"))
+        );
+
+        $copy = $original->copy(nameLast: "other");
+        $this->assertTrue(
+            $copy->equals(new Staff(1, "first1@mail.com", "first1", "other"))
+        );
+    }
 }

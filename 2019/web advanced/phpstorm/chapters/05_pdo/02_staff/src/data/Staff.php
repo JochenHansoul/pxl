@@ -30,12 +30,25 @@ class Staff
 
     public function equals($o): bool
     {
-        return (get_class($o) === get_called_class()
-            || is_subclass_of($o, get_called_class()))
+        return $this === $o
+            || ($this->isSameOrSubClass($o)
             && $this->id === $o->id
             && $this->email === $o->email
             && $this->nameFirst === $o->nameFirst
-            && $this->nameLast === $o->nameLast;
+            && $this->nameLast === $o->nameLast);
+    }
+
+    public function copy(
+        $id = null,
+        $email = null,
+        $nameFirst = null,
+        $nameLast = null
+    ): self {
+        return new self(
+            $id ?? $this->id,
+            $email ?? $this->email,
+            $nameFirst ?? $this->nameFirst,
+            $nameLast ?? $this->nameLast);
     }
 
     public function __toString(): string
@@ -45,5 +58,11 @@ class Staff
             . ", nameFirst = " . $this->nameFirst
             . ", nameLast = " . $this->nameLast
             . "}";
+    }
+
+    private function isSameOrSubclass($o): bool
+    {
+        return get_class($o) === get_called_class()
+                || is_subclass_of($o, get_called_class());
     }
 }
