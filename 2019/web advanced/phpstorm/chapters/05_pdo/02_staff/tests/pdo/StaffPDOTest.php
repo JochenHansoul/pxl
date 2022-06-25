@@ -11,7 +11,7 @@ final class StaffPDOTest extends TestCase
 {
     public function testClassConstructor(): void
     {
-        $staffPDO;
+        $staffPDO = null;
         try {
             $staffPDO = new StaffPDO();
         } catch (\PDOException $e) {
