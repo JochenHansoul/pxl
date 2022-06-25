@@ -6,6 +6,8 @@ namespace data;
 
 class Staff
 {
+    use ComparableWithSameOrChildClass;
+
     public readonly int $id;
     public readonly string $email;
     public readonly string $nameFirst;
@@ -31,7 +33,7 @@ class Staff
     public function equals($o): bool
     {
         return $this === $o
-            || ($this->isSameOrSubClass($o)
+            || ($this->isSameOrChildClass($o)
             && $this->id === $o->id
             && $this->email === $o->email
             && $this->nameFirst === $o->nameFirst
@@ -58,11 +60,5 @@ class Staff
             . ", nameFirst = " . $this->nameFirst
             . ", nameLast = " . $this->nameLast
             . "}";
-    }
-
-    private function isSameOrSubclass($o): bool
-    {
-        return get_class($o) === get_called_class()
-                || is_subclass_of($o, get_called_class());
     }
 }
