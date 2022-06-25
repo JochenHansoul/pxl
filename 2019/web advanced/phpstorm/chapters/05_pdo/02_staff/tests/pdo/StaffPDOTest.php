@@ -15,7 +15,7 @@ final class StaffPDOTest extends TestCase
         try {
             $staffPDO = new StaffPDO();
         } catch (\PDOException $e) {
-            echo $e->message();
+            echo $e->getMessage();
         }
         $this->assertNotNull($staffPDO);
     }
@@ -27,7 +27,7 @@ final class StaffPDOTest extends TestCase
             $staffPDO = new StaffPDO();
             $staffMembers = $staffPDO->getAllStaff();
         } catch (\PDOException $e) {
-            echo $e->message();
+            echo $e->getMessage();
         }
         $this->assertSame(3, \count($staffMembers));
 
