@@ -4,7 +4,10 @@
          verbose="true">
     <testsuites>
         <testsuite name="data">
-            <directory>tests</directory>
+            <directory>tests/data</directory>
+        </testsuite>
+        <testsuite name="pdo">
+            <directory>tests/pdo</directory>
         </testsuite>
     </testsuites>
 </phpunit>
