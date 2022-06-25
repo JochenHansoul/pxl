@@ -28,6 +28,16 @@ class Staff
         return $this->nameFirst . " " . $this->nameLast;
     }
 
+    public function equals($o): bool
+    {
+        return (get_class($o) === get_called_class()
+            || is_subclass_of($o, get_called_class()))
+            && $this->id === $o->id
+            && $this->email === $o->email
+            && $this->nameFirst === $o->nameFirst
+            && $this->nameLast === $o->nameLast;
+    }
+
     public function __toString(): string
     {
         return "staff{ id = " . $this->id
