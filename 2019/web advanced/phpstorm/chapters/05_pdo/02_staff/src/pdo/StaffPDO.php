@@ -27,7 +27,7 @@ class StaffPDO
         $this->pdo = getStudentPDO();
     }
 
-    public function getStaff(): array
+    public function getAllStaff(): array
     {
         $statement = $this->pdo->query("SELECT * FROM " . self::STAFF_TABLE);
         $statement->setFetchMode(\PDO::FETCH_ASSOC);

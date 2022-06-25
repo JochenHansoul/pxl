@@ -17,7 +17,7 @@ require_once "vendor/autoload.php";
 <?php
   try {
       $staffPDO = new StaffPDO();
-      $staffMembers = $staffPDO->getStaff(); ?>
+      $staffMembers = $staffPDO->getAllStaff(); ?>
   <ul>
 <?php foreach ($staffMembers as $staff): ?>
     <li><?php echo $staff->getFullName(); ?></li>
