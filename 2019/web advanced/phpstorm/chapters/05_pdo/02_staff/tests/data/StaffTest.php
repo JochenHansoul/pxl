@@ -10,12 +10,14 @@ final class StaffTest extends TestCase
 {
     public function testClassConstructor(): void
     {
-        $staff = new Staff(1, "first1@mail.com", "first1", "last1");
+        $date = new \DateTime();
+        $staff = new Staff(1, "first1@mail.com", "first1", "last1", $date);
 
         $this->assertSame(1, $staff->id);
         $this->assertSame("first1@mail.com", $staff->email);
         $this->assertSame("first1", $staff->nameFirst);
         $this->assertSame("last1", $staff->nameLast);
+        $this->assertSame($date, $staff->dateBirth);
     }
 
     public function testIdError(): void

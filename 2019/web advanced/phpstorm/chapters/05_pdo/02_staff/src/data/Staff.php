@@ -12,17 +12,20 @@ class Staff
     public readonly string $email;
     public readonly string $nameFirst;
     public readonly string $nameLast;
+    public readonly ?\DateTime $dateBirth;
 
     public function __construct(
         int $id,
         string $email,
         string $nameFirst,
-        string $nameLast
+        string $nameLast,
+        ?\DateTime $dateBirth = null
     ) {
         $this->id = $id;
         $this->email = $email;
         $this->nameFirst = $nameFirst;
         $this->nameLast = $nameLast;
+        $this->dateBirth = $dateBirth;
     }
 
     public function getFullName(): string
